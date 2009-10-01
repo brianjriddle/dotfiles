@@ -90,6 +90,9 @@ alias egrep='egrep --color=auto'
 #alias l='ls -CF'
 
 
+#less options - raw control characters and no termcap initilization
+#defined here so we can use it as an alias for less and for PAGER
+LESS='/usr/bin/less -XR'
 ###
 #aliases
 ###
@@ -107,9 +110,6 @@ alias ri='/usr/bin/ri --format ansi'
 #ack-grep replacement of grep
 alias ack=ack-grep
 
-#less options - raw control characters and no termcap initilization
-#defined here so we can use it as an alias for less and for PAGER
-LESS='/usr/bin/less -XR'
 
 #use LESS as pager
 export PAGER=$LESS
@@ -121,6 +121,8 @@ export RUBYOPT=rubygems
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin
 
+export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -128,4 +130,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
+#Ensure that we have utf turned on.
+#export LC_ALL=sv_SE.utf8
+#export LANG=sv_SE.UTF-8
+

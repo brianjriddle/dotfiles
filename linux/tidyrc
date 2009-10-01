@@ -1,1 +1,9 @@
-wrap:   0 
+wrap:0
+quiet: yes
+indent:yes
+indent-attributes:yes
+indent-cdata:yes
+indent-spaces:2
+char-encoding:utf8
+input-encoding:utf8
+output-encoding:utf8
