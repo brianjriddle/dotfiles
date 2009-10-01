@@ -1,14 +1,15 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# for examples sources /etc/bash.bashrc).
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
+#export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
+export HISTFILESIZE=9000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -70,7 +71,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b ~/.DIRCOLORS`"
+    eval "`dircolors -b ~/.DIR_COLORS`"
     alias ls='ls --color=auto'
     #alias dir='ls --color=auto --format=vertical'
     #alias vdir='ls --color=auto --format=long'
@@ -83,18 +84,48 @@ fi
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias python3=python3.0
 # some more ls aliases
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
 
-export EDITOR=/usr/bin/vim
+
+###
+#aliases
+###
+#long human readable ls output
+alias ll='ls -lh'
+#grep with colors :)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias less=$LESS
+
+#ruby documentation on the command line in color
+alias ri='/usr/bin/ri --format ansi'
+
+#ack-grep replacement of grep
+alias ack=ack-grep
+
+#less options - raw control characters and no termcap initilization
+#defined here so we can use it as an alias for less and for PAGER
+LESS='/usr/bin/less -XR'
+
+#use LESS as pager
+export PAGER=$LESS
+
+# ruby options
 export RUBYOPT=rubygems
+
+# i use vim if at all possible.
+export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
