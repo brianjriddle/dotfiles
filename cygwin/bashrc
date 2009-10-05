@@ -108,8 +108,7 @@ alias more=less
 #as the options getting it to work under cygwin are not
 #nice
 if [ -f c:/WINDOWS/gvim.bat ]; then
-    alias vim=c:/WINDOWS/gvim.bat
-    alias vi=vim
+    alias gvim=c:/WINDOWS/gvim.bat
 fi
 
 #ruby documentation on the command line in color
@@ -126,6 +125,7 @@ export RUBYOPT=rubygems
 
 # i use vim if at all possible.
 export EDITOR=vim
+export GIT_EDITOR=vim
 
 export JAVA_HOME=C:/java/jdk1.6.0_06/
 export JDK_HOME=$JAVA_HOME
