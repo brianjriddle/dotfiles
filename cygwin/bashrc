@@ -149,6 +149,7 @@ fi
 
 #ant output in color
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
+export ANT_OPTS="-Dant.logger.defaults=$HOME/.antoptts"
 
 export LANG=sv_SE.utf8
 export LC_ALL=sv_SEutf8
