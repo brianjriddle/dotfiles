@@ -95,14 +95,6 @@ else
     syntax enable
 endif
 
-" Change <Leader>
-let mapleader = ","
-
-" Catch trailing whitespace
-set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
-
-
 "map a key for pasting text in the terminal as this is
 "*my* default way of running vim :)
 set pastetoggle=<F12>
@@ -131,6 +123,15 @@ augroup END
 """"
 " key mappings
 """"
+
+" Change <Leader>
+let mapleader = ","
+
+" Catch trailing whitespace
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+noremap <leader>ff :FufFile<CR>
 
 "map f6 to toggle search highlighting
 map <F6> :set hls!<CR>

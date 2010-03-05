@@ -4,6 +4,7 @@
 "make sure we are not compatible with vi
 set nocompatible
 
+set encoding=utf-8
 " One of the most important options to activate. Allows you to switch from an
 " " unsaved buffer without saving it first. Also allows you to keep an undo
 " " history for multiple files. Vim will complain if you try to quit without
@@ -94,14 +95,6 @@ else
     syntax enable
 endif
 
-" Change <Leader>
-let mapleader = ","
-
-" Catch trailing whitespace
-set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
-
-
 "map a key for pasting text in the terminal as this is
 "*my* default way of running vim :)
 set pastetoggle=<F12>
@@ -130,6 +123,15 @@ augroup END
 """"
 " key mappings
 """"
+
+" Change <Leader>
+let mapleader = ","
+
+" Catch trailing whitespace
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+noremap <leader>ff :FufFile<CR>
 
 "map f6 to toggle search highlighting
 map <F6> :set hls!<CR>
