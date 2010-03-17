@@ -146,6 +146,8 @@ map <F8> :set wrap!<CR>
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
 
+nmap <silent> <leader>ff :FufFile<CR>
+
 "GPGOptions
 let g:GPGPreferSymmetric=1
 
