@@ -4,6 +4,17 @@
 "make sure we are not compatible with vi
 set nocompatible
 
+"knock off the training wheels
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
 set encoding=utf-8
 " One of the most important options to activate. Allows you to switch from an
 " " unsaved buffer without saving it first. Also allows you to keep an undo
@@ -105,10 +116,19 @@ set cmdheight=2
 "do not clear screen on exit
 "set t_ti= t_te=
 
+set grepprg=ack-grep
+
+set number
 
 """"
 " plugins
 """"
+
+"initialize pathogen and all gthe bundles under .vim/bundle
+filetype off 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 filetype plugin indent on
 
 " Load matchit (% to bounce from do to end, etc.)
@@ -118,6 +138,7 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+  autocmd FileType snippets set noexpandtab
 augroup END
                
 """"
@@ -133,6 +154,13 @@ nmap <silent> <leader>s :set nolist!<CR>
 
 noremap <leader>ff :FufFile<CR>
 
+"key mappings for fugitive
+nmap <leader>gsr :Git svn rebase<CR>
+nmap <leader>gsd :Git svn dcommit<CR>
+
+"key mappings for NERDTREE
+nmap <leader>nt :NERDTreeToggle<CR>
+
 "map f6 to toggle search highlighting
 map <F6> :set hls!<CR>
 
@@ -145,8 +173,6 @@ map <F8> :set wrap!<CR>
 "map <F9> to reformat entire file. this also saves the current cursor
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
-
-nmap <silent> <leader>ff :FufFile<CR>
 
 "GPGOptions
 let g:GPGPreferSymmetric=1

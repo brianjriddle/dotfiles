@@ -1,18 +1,18 @@
 [submodule "vim/bundle/fugitive"]
-    path = vim/bundle/fugitive
-    url = http://github.com/tpope/vim-fugitive.git
+	path = vim/bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/rails"]
-    path = vim/bundle/rails
-    url = http://github.com/tpope/vim-rails.git
+	path = vim/bundle/rails
+	url = http://github.com/tpope/vim-rails.git
 [submodule "vim/bundle/surround"]
-    path = vim/bundle/surround
-    url = http://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/nerdtree"]
-    path = vim/bundle/nerdtree
-    url = http://github.com/scrooloose/nerdtree.git
+	path = vim/bundle/surround
+	url = http://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/snipmate-snippets"]
-    path = vim/bundle/snipmate-snippets
-    url = http://github.com/scrooloose/snipmate-snippets.git
+	path = vim/bundle/snipmate-snippets
+	url = http://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/ack"]
-    path = vim/bundle/ack
-    url = http://github.com/mileszs/ack.git
+	path = vim/bundle/ack
+	url = http://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = http://github.com/msanders/snipmate.vim.git
