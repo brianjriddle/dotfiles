@@ -7,3 +7,4 @@ export TZ=`cat /etc/timezone`
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 alias ack='ack-grep'
+setopt RM_STAR_SILENT
