@@ -57,6 +57,8 @@ set tabstop=4
 "Use standard 4-char indentation
 set shiftwidth=4 
 
+set softtabstop=4
+
 "Indent/Dedent to nearest 4-char boundary
 set shiftround 
 
@@ -124,23 +126,24 @@ set number
 " plugins
 """"
 
-"initialize pathogen and all gthe bundles under .vim/bundle
+"initialize pathogen and all the bundles under .vim/bundle
 filetype off 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-filetype plugin indent on
+if has("autocmd")
+  filetype plugin indent on
+  " Load matchit (% to bounce from do to end, etc.)
+  runtime! macros/matchit.vim
+  augroup myfiletypes
+    " Clear old autocmds in group
+    autocmd!
+    " autoindent with two spaces, always expand tabs
+    autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+    autocmd FileType snippets set noexpandtab
+  augroup END
+endif
 
-" Load matchit (% to bounce from do to end, etc.)
-runtime! macros/matchit.vim
-augroup myfiletypes
-  " Clear old autocmds in group
-  autocmd!
-  " autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-  autocmd FileType snippets set noexpandtab
-augroup END
-               
 """"
 " key mappings
 """"
