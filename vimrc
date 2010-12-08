@@ -159,6 +159,11 @@ nmap <silent> <leader>s :set nolist!<CR>
 noremap <leader>ff :FufFile<CR>
 
 "key mappings for fugitive
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
 nmap <leader>gsr :Git svn rebase<CR>
 nmap <leader>gsd :Git svn dcommit<CR>
 
