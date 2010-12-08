@@ -156,6 +156,13 @@ let mapleader = ","
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
+"spped up buffer switching from https://github.com/nelstrom/dotfiles/
+map <C-k> <C-W>k
+map <C-j> <C-W>j
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"if on window use this otherwise use command-T
 noremap <leader>ff :FufFile<CR>
 
 "key mappings for fugitive
@@ -171,7 +178,7 @@ nmap <leader>gsd :Git svn dcommit<CR>
 nmap <leader>nt :NERDTreeToggle<CR>
 
 "map f6 to toggle search highlighting
-map <F6> :set hls!<CR>
+map <F6> :silent :nohlsearch<CR>
 
 " map f7 to allow turning on and off of syntax on/off
 map <F7> :if exists("syntax_on") <Bar> syntax off <Bar> else <Bar> syntax enable <Bar> endif<CR>
@@ -182,7 +189,3 @@ map <F8> :set wrap!<CR>
 "map <F9> to reformat entire file. this also saves the current cursor
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
-
-"GPGOptions
-let g:GPGPreferSymmetric=1
-
