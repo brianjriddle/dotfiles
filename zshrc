@@ -17,3 +17,6 @@ export ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+if [ -f /usr/bin/xdg-open ]; then
+    alias open=/usr/bin/xdg-open
+fi
