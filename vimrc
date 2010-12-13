@@ -142,6 +142,8 @@ if has("autocmd")
     autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
     autocmd FileType snippets set noexpandtab
     autocmd bufwritepost .vimrc source $MYVIMRC
+    "set json to to javascript
+    autocmd BufRead *.json set filetype=javascript
   augroup END
 endif
 
