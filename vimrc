@@ -162,7 +162,19 @@ map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"if on window use this otherwise use command-T
+"Run rake from rails.vim
+nmap <leader>r :Rake<cr>
+
+"another nelstrom tip using tim-pope's unimpaired
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+
+"if on windows(tm) use this otherwise use command-T
 noremap <leader>ff :FufFile<CR>
 
 "key mappings for fugitive
@@ -175,7 +187,7 @@ nmap <leader>gsr :Git svn rebase<CR>
 nmap <leader>gsd :Git svn dcommit<CR>
 
 "key mappings for NERDTREE
-nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 "map f6 to toggle search highlighting
 map <F6> :silent :nohlsearch<CR>
