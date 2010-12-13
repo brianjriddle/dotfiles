@@ -20,3 +20,8 @@ task :install_base_files do
     cp file , File.expand_path("~/.#{file}")
   end
 end
+
+desc 'install oh-my-zsh'
+task :install_oh_my_zsh do
+  sh 'git clone http://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh'
+end
