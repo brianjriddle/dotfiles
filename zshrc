@@ -14,9 +14,17 @@ export ZSH_THEME="robbyrussell"
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 if [ -f /usr/bin/xdg-open ]; then
     alias open=/usr/bin/xdg-open
 fi
+
+unsetopt auto_name_dirs
+#add rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
