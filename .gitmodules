@@ -27,10 +27,10 @@
 	url = http://github.com/tpope/vim-markdown.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
+	url = http://github.com/wincent/Command-T.git
 [submodule "vim/bundle/vim-cucumber"]
 	path = vim/bundle/vim-cucumber
-	url = https://github.com/tpope/vim-cucumber.git
+	url = http://github.com/tpope/vim-cucumber.git
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
