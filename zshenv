@@ -1,4 +1,3 @@
-export RUBYOPT=rubygems
 export EDITOR=/usr/bin/vim
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export JDK_HOME=$JAVA_HOME
