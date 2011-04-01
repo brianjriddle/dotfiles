@@ -131,6 +131,16 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"set up colorscheme
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
+let g:solarized_termcolors=16
+colorscheme solarized
+
 if has("autocmd")
   filetype plugin indent on
   " Load matchit (% to bounce from do to end, etc.)
@@ -203,3 +213,17 @@ map <F8> :set wrap!<CR>
 "map <F9> to reformat entire file. this also saves the current cursor
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
+
+function! ToggleBackground()
+    if (g:solarized_style=="dark")
+    let g:solarized_style="light"
+    colorscheme solarized
+else
+    let g:solarized_style="dark"
+    colorscheme solarized
+endif
+endfunction
+command! Togbg call ToggleBackground()
+nnoremap <F5> :call ToggleBackground()<CR>
+inoremap <F5> <ESC>:call ToggleBackground()<CR>a
+vnoremap <F5> <ESC>:call ToggleBackground()<CR>
