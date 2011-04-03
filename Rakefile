@@ -7,9 +7,13 @@ end
 
 desc 'install vim dir to ~/.vim'
 task :install_vim => :install_vimrc do
+  `git submodule update --init`
+  rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
+    sh 'rvm use system'
     sh 'rake make'
+    sh 'rvm use default'
   end
 end
 
