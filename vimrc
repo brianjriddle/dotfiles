@@ -200,6 +200,7 @@ nmap <leader>gsd :Git svn dcommit<CR>
 
 "key mappings for NERDTREE
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>N :NERDTreeFind<CR>
 
 "map f6 to toggle search highlighting
 map <F6> :silent :nohlsearch<CR>
