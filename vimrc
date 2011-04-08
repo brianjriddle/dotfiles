@@ -138,7 +138,6 @@ else
     set background=dark
 endif
 
-let g:solarized_termcolors=16
 colorscheme solarized
 
 if has("autocmd")
@@ -215,16 +214,7 @@ map <F8> :set wrap!<CR>
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
 
-function! ToggleBackground()
-    if (g:solarized_style=="dark")
-    let g:solarized_style="light"
-    colorscheme solarized
-else
-    let g:solarized_style="dark"
-    colorscheme solarized
-endif
-endfunction
-command! Togbg call ToggleBackground()
-nnoremap <F5> :call ToggleBackground()<CR>
-inoremap <F5> <ESC>:call ToggleBackground()<CR>a
-vnoremap <F5> <ESC>:call ToggleBackground()<CR>
+nmap <unique> <F5> <Plug>ToggleBackground
+imap <unique> <F5> <Plug>ToggleBackground
+vmap <unique> <F5> <Plug>ToggleBackground
+
