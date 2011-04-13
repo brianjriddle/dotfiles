@@ -214,7 +214,4 @@ map <F8> :set wrap!<CR>
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
 
-nmap <unique> <F5> <Plug>ToggleBackground
-imap <unique> <F5> <Plug>ToggleBackground
-vmap <unique> <F5> <Plug>ToggleBackground
-
+call togglebg#map("<F5>")
