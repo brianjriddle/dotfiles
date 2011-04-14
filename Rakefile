@@ -19,7 +19,7 @@ end
 
 desc 'install base files'
 task :install_base_files do
-  files = FileList['DIR_COLORS','antopts','bash_logout', 'bash_profile', 'bashrc', 'curlrc', 'gitignore', 'irbrc', 'profile', 'tidyrc', 'zshenv', 'zshrc']
+  files = FileList['DIR_COLORS','ackrc', 'antopts','bash_logout', 'bash_profile', 'bashrc', 'curlrc', 'gitignore', 'irbrc', 'profile', 'tidyrc', 'zshenv', 'zshrc']
   files.each do |file| 
     cp file , File.expand_path("~/.#{file}")
   end
