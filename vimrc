@@ -122,8 +122,8 @@ set grepprg=ack-grep
 
 set number
 
-#fix for zshrc not getting source when using rvm.
-#see http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/
+"fix for zshrc not getting source when using rvm.
+"see http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/
 set shell=sh
 
 """"
