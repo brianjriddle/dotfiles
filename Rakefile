@@ -7,7 +7,8 @@ end
 
 desc 'install vim dir to ~/.vim'
 task :install_vim => :install_vimrc do
-  `git submodule update --init`
+  `git submodule foreach git checkout master`
+  `git submodule foreach git pull`
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
