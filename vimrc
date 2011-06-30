@@ -188,10 +188,6 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-
-"if on windows(tm) use this otherwise use command-T
-noremap <leader>ff :FufFile<CR>
-
 "key mappings for fugitive
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
@@ -219,3 +215,7 @@ map <F8> :set wrap!<CR>
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
 
 call togglebg#map("<F5>")
+
+"enable syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
