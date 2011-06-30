@@ -5,6 +5,11 @@ task :install_vimrc do
   cp 'gvimrc', File.expand_path('~/.gvimrc')
 end
 
+desc 'update vim bundles'
+task :upate_vim_bundles do
+  sh 'git submodule foreach git pull'
+end
+
 desc 'install vim dir to ~/.vim'
 task :install_vim => :install_vimrc do
   `git submodule foreach git checkout master`
