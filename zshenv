@@ -1,5 +1,9 @@
-export EDITOR="/usr/local/bin/mvim -f"
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:~/work/apps/ant/bin:$PATH
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+#set up vim
+export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vi=$EDITOR
+alias vim=$EDITOR
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/Command:~/work/apps/ant/bin:$PATH
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 setopt RM_STAR_SILENT
