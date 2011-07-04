@@ -6,21 +6,18 @@ task :install_vimrc do
 end
 
 desc 'update vim bundles'
-task :upate_vim_bundles do
+task :update_vim_bundles do
+  puts "updating vim submodules"
   sh 'git submodule foreach git pull'
 end
 
 desc 'install vim dir to ~/.vim'
-task :install_vim => :install_vimrc do
+task :install_vim => [:install_vimrc , :update_vim_bundles] do
   `git submodule foreach git checkout master`
-  `git submodule foreach git pull`
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
-    sh 'rvm use system'
-    sh 'rake clean'
-    sh 'rake make'
-    sh 'rvm use default'
+    sh 'rvm use system && rake clean && rake make && rvm use default'
   end
 end
 
