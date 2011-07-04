@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="robbyrussell"
-
+export RPROMPT='[%*]'
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -16,15 +16,15 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(ant brew bundler git rails3)
 
 source $ZSH/oh-my-zsh.sh
+
+#remove LSCOLORS so solarized and iterm are readable
+unset LSCOLORS
 
 # Customize to your needs...
 if [ -f /usr/bin/xdg-open ]; then
     alias open=/usr/bin/xdg-open
 fi
 
-unsetopt auto_name_dirs
-#add rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
