@@ -1,6 +1,10 @@
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 #set up vim
-export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+if [[ "Darwin" == `uname -s` ]]; then
+    export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+else
+    export EDITOR=vim
+fi
 alias vi=$EDITOR
 alias vim=$EDITOR
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/Command:~/work/apps/ant/bin:$PATH

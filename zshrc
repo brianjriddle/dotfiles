@@ -20,11 +20,20 @@ plugins=(ant brew bundler git rails3)
 
 source $ZSH/oh-my-zsh.sh
 
-#remove LSCOLORS so solarized and iterm are readable
-unset LSCOLORS
-
 # Customize to your needs...
 if [ -f /usr/bin/xdg-open ]; then
     alias open=/usr/bin/xdg-open
 fi
 
+#mac specific settings
+
+if [[ "Darwin" == `uname -s` ]]; then
+    #remove LSCOLORS so solarized and iterm are readable
+    unset LSCOLORS
+
+    #check homebrew coreutils are installed
+    if [[ -f /usr/local/bin/gls ]]; then
+        eval "`gdircolors -b ~/.DIR_COLORS`"
+        alias ls="gls --color=auto"
+    fi
+fi
