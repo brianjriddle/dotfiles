@@ -28,8 +28,9 @@ fi
 #mac specific settings
 
 if [[ "Darwin" == `uname -s` ]]; then
-    #remove LSCOLORS so solarized and iterm are readable
+    #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
     unset LSCOLORS
+    unset GREP_COLOR
 
     #check homebrew coreutils are installed
     if [[ -f /usr/local/bin/gls ]]; then
