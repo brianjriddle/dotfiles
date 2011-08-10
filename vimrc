@@ -132,7 +132,7 @@ set shell=sh
 
 "initialize pathogen and all the bundles under .vim/bundle
 filetype off 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 "set up colorscheme
