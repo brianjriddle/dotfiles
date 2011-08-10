@@ -1,4 +1,5 @@
 include FileUtils::Verbose 
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc profile tidyrc zshenv zshrc}
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
   cp 'vimrc', File.expand_path('~/.vimrc')
@@ -21,11 +22,18 @@ task :install_vim => [:install_vimrc , :update_vim_bundles] do
   end
 end
 
+desc 'checks to see which files are different'
+task :check_rcs do
+  files = FileList[rc_files]
+  files.each do |file| 
+    print %x{ diff -q #{file} #{File.expand_path("~/.#{file}") } }
+  end
+end
 desc 'install base files'
 task :install_base_files do
-  files = FileList['DIR_COLORS','ackrc', 'antopts','bash_logout', 'bash_profile', 'bashrc', 'curlrc','gitconfig', 'gitignore', 'irbrc', 'profile', 'tidyrc', 'zshenv', 'zshrc']
+  files = FileList[rc_files]
   files.each do |file| 
-    cp file , File.expand_path("~/.#{file}")
+    cp file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
   end
 end
 
