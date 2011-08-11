@@ -5,6 +5,8 @@ if [[ "Darwin" == `uname -s` ]]; then
 else
     export EDITOR=vim
 fi
+alias less='less -XR'
+alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/Command:~/work/apps/ant/bin:$PATH
