@@ -4,16 +4,18 @@
 "make sure we are not compatible with vi
 set nocompatible
 
+"ok this just makes everybody freak :) turning off 
+"makes paring easier.
 "knock off the training wheels
 " disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
+"imap <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
 
 set encoding=utf-8
 " One of the most important options to activate. Allows you to switch from an
