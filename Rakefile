@@ -12,8 +12,13 @@ task :update_vim_bundles do
   sh 'git submodule foreach git pull'
 end
 
+desc 'update pathogen'
+task :update_pathogen do
+  %x{curl https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim >> vim/autoload/pathogen.vim }
+end
+
 desc 'install vim dir to ~/.vim'
-task :install_vim => [:install_vimrc , :update_vim_bundles] do
+task :install_vim => [:install_vimrc , :update_vim_bundles, :update_pathogen] do
   `git submodule foreach git checkout master`
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
@@ -29,6 +34,7 @@ task :check_rcs do
     print %x{ diff -q #{file} #{File.expand_path("~/.#{file}") } }
   end
 end
+
 desc 'install base files'
 task :install_base_files do
   files = FileList[rc_files]
