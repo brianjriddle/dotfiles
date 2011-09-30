@@ -5,13 +5,17 @@ if [[ "Darwin" == `uname -s` ]]; then
 else
     export EDITOR=vim
 fi
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/Command:~/work/apps/ant/bin:$PATH
+export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
+export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
+
+#set up aliases
 alias less='less -XR'
 alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/Command:~/work/apps/ant/bin:$PATH
-export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
-export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
+
+#set up zsh variables
 setopt RM_STAR_SILENT
 unsetopt correct_all
 unsetopt auto_name_dirs

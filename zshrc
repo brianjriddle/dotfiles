@@ -19,6 +19,7 @@ export RPROMPT='[%*]'
 plugins=(ant brew bundler git rails3)
 
 source $ZSH/oh-my-zsh.sh
+export LC_CTYPE=en_US.UTF-8
 
 # Customize to your needs...
 if [ -f /usr/bin/xdg-open ]; then
