@@ -9,6 +9,8 @@ end
 desc 'update vim bundles'
 task :update_vim_bundles do
   puts "updating vim submodules"
+  sh 'git submodule update --init'
+  sh 'git submodule foreach git checkout master'
   sh 'git submodule foreach git pull'
 end
 
@@ -19,7 +21,6 @@ end
 
 desc 'install vim dir to ~/.vim'
 task :install_vim => [:install_vimrc , :update_vim_bundles, :update_pathogen] do
-  `git submodule foreach git checkout master`
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
