@@ -19,3 +19,4 @@
 --ignore-dir=SCCS
 --ignore-dir=_sgbak 
 --ignore-dir=.svn
+--ignore-dir=.swp
