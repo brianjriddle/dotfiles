@@ -159,6 +159,8 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
     "set json to to javascript
     autocmd BufRead *.json set filetype=javascript
+    "Rakefile, Capfile are ruby files.
+    autocmd BufRead Capfile set filetype=ruby
   augroup END
 endif
 
