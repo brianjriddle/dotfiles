@@ -1,5 +1,5 @@
 include FileUtils::Verbose 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc profile tidyrc zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc profile rvmrc tidyrc zshenv zshrc}
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
   cp 'vimrc', File.expand_path('~/.vimrc')
