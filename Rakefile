@@ -24,7 +24,7 @@ task :install_vim => [:install_vimrc , :update_vim_bundles, :update_pathogen] do
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
-    sh 'rvm use system && rake clean && rake make && rvm use default'
+    sh '. $HOME/.rvm/scripts/rvm && rvm use system && rake clean && rake make && rvm use default'
   end
 end
 
