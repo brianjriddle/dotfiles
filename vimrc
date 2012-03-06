@@ -120,7 +120,6 @@ set cmdheight=2
 "do not clear screen on exit
 "set t_ti= t_te=
 
-set grepprg=ack-grep
 
 set number
 
@@ -251,3 +250,6 @@ call togglebg#map("<F5>")
 "enable syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+"enable ack.vim
+let g:ackprg="ack -H --nocolor --nogroup --column"
