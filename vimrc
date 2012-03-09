@@ -191,6 +191,16 @@ set statusline+=%l/%L "cursor line/total lines
 set statusline+=\ %P "percent through file
 set laststatus=2
 
+" Catch trailing whitespace
+set listchars=tab:>-,trail:·,eol:$
+
+"enable syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+"enable ack.vim
+let g:ackprg="ack -H --nocolor --nogroup --column"
+
 """"
 " key mappings
 """"
@@ -198,8 +208,6 @@ set laststatus=2
 " Change <Leader>
 let mapleader = ","
 
-" Catch trailing whitespace
-set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
 "spped up buffer switching from https://github.com/nelstrom/dotfiles/
@@ -245,11 +253,15 @@ map <F8> :set wrap!<CR>
 "position so you are right back where you started. 
 map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
 
+"solarize toggle
 call togglebg#map("<F5>")
 
-"enable syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-
-"enable ack.vim
-let g:ackprg="ack -H --nocolor --nogroup --column"
+"keymappings for Tabularize
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+endif
