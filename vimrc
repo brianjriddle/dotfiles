@@ -194,9 +194,6 @@ set laststatus=2
 " Catch trailing whitespace
 set listchars=tab:>-,trail:·,eol:$
 
-"enable syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
 
 "enable ack.vim
 let g:ackprg="ack -H --nocolor --nogroup --column"
