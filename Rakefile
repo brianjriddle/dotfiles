@@ -17,6 +17,7 @@ end
 desc 'update pathogen'
 task :update_pathogen do
   %x{curl https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > vim/autoload/pathogen.vim }
+  puts "done updating pathogen"
 end
 
 desc 'install vim dir to ~/.vim'
@@ -30,16 +31,14 @@ end
 
 desc 'checks to see which files are different'
 task :check_rcs do
-  files = FileList[rc_files]
-  files.each do |file| 
+  FileList[rc_files].each do |file| 
     print %x{ diff -q #{file} #{File.expand_path("~/.#{file}") } }
   end
 end
 
 desc 'install base files'
 task :install_base_files do
-  files = FileList[rc_files]
-  files.each do |file| 
+  FileList[rc_files].each do |file| 
     cp file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
   end
 end

@@ -21,3 +21,5 @@ unsetopt correct_all
 unsetopt auto_name_dirs
 #add rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
