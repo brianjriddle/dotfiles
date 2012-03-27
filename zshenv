@@ -2,6 +2,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 #set up vim
 if [[ "Darwin" == `uname -s` ]]; then
     export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+    export CC=/usr/bin/gcc-4.2
 else
     export EDITOR=vim
 fi
