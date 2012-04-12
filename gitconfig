@@ -2,3 +2,5 @@
 	excludesfile = ~/.gitignore
 [color]
     ui = auto
+[branch]
+	autosetuprebase = always

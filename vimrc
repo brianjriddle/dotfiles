@@ -89,14 +89,19 @@ set title
 "keep 1000 items in history
 set history=1000
 
-"keepp more context when scrolling
-set scrolloff=3
+"keep more context when scrolling
+"set scrolloff=3
+set scrolloff=999
 
 "keep prompts quiter
 set shortmess=atI
 
 "don't beep
 set visualbell
+set t_vb=
+
+"Link unnamed register and OS clipboard:
+set clipboard=unnamed
 
 " Enable use of the mouse for all modes
 if has('mouse')
@@ -262,3 +267,14 @@ if exists(":Tabularize")
   nmap <Leader>a> :Tabularize /=><CR>
   vmap <Leader>a> :Tabularize /=><CR>
 endif
+
+" Backspace in Visual mode deletes selection.
+"
+vnoremap <BS> d
+" Tab/Shift+Tab indent/unindent the highlighted
+" block (and maintain the highlight after changing
+" the indentation). Works for both Visual and
+" Select modes.
+"
+vnoremap <Tab>    >gv
+vnoremap <S-Tab>  <gv
