@@ -1,5 +1,5 @@
 include FileUtils::Verbose 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc profile rspec rvmrc tidyrc zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js profile rspec rvmrc tidyrc zshenv zshrc}
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
   cp 'vimrc', File.expand_path('~/.vimrc')
@@ -39,7 +39,7 @@ end
 desc 'install base files'
 task :install_base_files do
   FileList[rc_files].each do |file| 
-    cp file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
+    cp_r file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
   end
 end
 
