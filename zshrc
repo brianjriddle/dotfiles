@@ -33,24 +33,5 @@ export RPROMPT='[%*]'
 plugins=(ant brew bundler git rails3)
 
 source $ZSH/oh-my-zsh.sh
-export LC_CTYPE=en_US.UTF-8
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/System/Library/Frameworks/JavaVM.framework/Home/Command:$HOME/work/apps/ant/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/.rvm/bin
-if [ -f /usr/bin/xdg-open ]; then
-    alias open=/usr/bin/xdg-open
-fi
-
-#mac specific settings
-
-if [[ "Darwin" == `uname -s` ]]; then
-    #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
-    unset LSCOLORS
-    unset GREP_COLOR
-
-    #check homebrew coreutils are installed
-    if [[ -f /usr/local/bin/gls ]]; then
-        eval "`gdircolors -b ~/.DIR_COLORS`"
-        alias ls="gls --color=auto"
-    fi
-fi
