@@ -165,6 +165,7 @@ if has("autocmd")
     autocmd BufRead *.json set filetype=javascript
     "Rakefile, Capfile are ruby files.
     autocmd BufRead Capfile set filetype=ruby
+    autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
   augroup END
 endif
 
@@ -237,6 +238,9 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gsr :Git svn rebase<CR>
 nmap <leader>gsd :Git svn dcommit<CR>
+
+"make moving to next spelling mistake easier
+nmap <leader>S ]s
 
 "key mappings for NERDTREE
 nmap <leader>n :NERDTreeToggle<CR>
