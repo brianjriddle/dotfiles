@@ -166,6 +166,7 @@ if has("autocmd")
     "Rakefile, Capfile are ruby files.
     autocmd BufRead Capfile set filetype=ruby
     autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
+    autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
   augroup END
 endif
 
@@ -264,12 +265,12 @@ call togglebg#map("<F5>")
 
 "keymappings for Tabularize
 if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-  nmap <Leader>a> :Tabularize /=><CR>
-  vmap <Leader>a> :Tabularize /=><CR>
+  noremap  <Leader>a= :Tabularize /=<CR>
+  vnoremap <Leader>a= :Tabularize /=<CR>
+  noremap  <Leader>a: :Tabularize /:\zs<CR>
+  vnoremap <Leader>a: :Tabularize /:\zs<CR>
+  noremap  <Leader>a> :Tabularize /=><CR>
+  vnoremap <Leader>a> :Tabularize /=><CR>
 endif
 
 " Backspace in Visual mode deletes selection.
