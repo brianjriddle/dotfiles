@@ -1,5 +1,7 @@
 include FileUtils::Verbose 
+
 rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js profile rspec rvmrc tidyrc zshenv zshrc}
+
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
   cp 'vimrc', File.expand_path('~/.vimrc')
@@ -21,7 +23,7 @@ task :update_pathogen do
 end
 
 desc 'install vim dir to ~/.vim'
-task :install_vim => [:install_vimrc , :update_vim_bundles, :update_pathogen] do
+task :install_vim => [:install_vimrc, :update_pathogen] do
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
   Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
