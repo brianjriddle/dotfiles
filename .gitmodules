@@ -9,7 +9,7 @@
 	url = http://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/snipmate-snippets"]
 	path = vim/bundle/snipmate-snippets
-	url = http://github.com/scrooloose/nerdtree.git
+	url = http://github.com/scrooloose/snipmate-snippets.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = http://github.com/mileszs/ack.vim.git
