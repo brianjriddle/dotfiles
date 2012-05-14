@@ -263,8 +263,8 @@ map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cur
 "solarize toggle
 call togglebg#map("<F5>")
 
-"keymappings for Tabularize
-if exists(":Tabularize")
+"keymappings for Tabular
+if !has('&g:tabular_loaded')
   noremap  <leader>a= :Tabularize /=<CR>
   vnoremap <leader>a= :Tabularize /=<CR>
   noremap  <leader>a: :Tabularize /:\zs<CR>
