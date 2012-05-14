@@ -209,7 +209,7 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 " key mappings
 """"
 
-" Change <Leader>
+" Change <leader>
 let mapleader = ","
 
 nmap <silent> <leader>s :set nolist!<CR>
@@ -265,12 +265,12 @@ call togglebg#map("<F5>")
 
 "keymappings for Tabularize
 if exists(":Tabularize")
-  noremap  <Leader>a= :Tabularize /=<CR>
-  vnoremap <Leader>a= :Tabularize /=<CR>
-  noremap  <Leader>a: :Tabularize /:\zs<CR>
-  vnoremap <Leader>a: :Tabularize /:\zs<CR>
-  noremap  <Leader>a> :Tabularize /=><CR>
-  vnoremap <Leader>a> :Tabularize /=><CR>
+  noremap  <leader>a= :Tabularize /=<CR>
+  vnoremap <leader>a= :Tabularize /=<CR>
+  noremap  <leader>a: :Tabularize /:\zs<CR>
+  vnoremap <leader>a: :Tabularize /:\zs<CR>
+  noremap  <leader>a> :Tabularize /=><CR>
+  vnoremap <leader>a> :Tabularize /=><CR>
 endif
 
 " Backspace in Visual mode deletes selection.
