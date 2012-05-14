@@ -268,6 +268,7 @@ if !has('&g:tabular_loaded')
   noremap  <leader>a= :Tabularize /=<CR>
   vnoremap <leader>a= :Tabularize /=<CR>
   noremap  <leader>a: :Tabularize /:\zs<CR>
+  noremap  <leader>A: :let save_cursor = getpos(".")<CR> :%Tabularize /:\zs<CR> :call setpos(".", save_cursor)<CR> :echo "Buffer realigned" <CR>
   vnoremap <leader>a: :Tabularize /:\zs<CR>
   noremap  <leader>a> :Tabularize /=><CR>
   vnoremap <leader>a> :Tabularize /=><CR>
