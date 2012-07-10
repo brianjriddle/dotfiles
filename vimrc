@@ -284,3 +284,5 @@ vnoremap <BS> d
 "
 vnoremap <Tab>    >gv
 vnoremap <S-Tab>  <gv
+"remap control-] so we can get jump to files using ctags.
+noremap <leader>i <C-]>
