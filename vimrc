@@ -241,7 +241,7 @@ nmap <leader>gsr :Git svn rebase<CR>
 nmap <leader>gsd :Git svn dcommit<CR>
 
 "make moving to next spelling mistake easier
-nmap <leader>S ]s
+nmap <leader>z ]s
 
 "key mappings for NERDTREE
 nmap <leader>n :NERDTreeToggle<CR>
