@@ -30,7 +30,7 @@ export RPROMPT='[%*]'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ant brew bundler git rails3)
+plugins=(ant brew bundler git rails3 heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,8 +49,7 @@ fi
 #mac specific settings
 
 if [[ "Darwin" == `uname -s` ]]; then
-    export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
-    export CC=/usr/bin/gcc-4.2
+    export EDITOR="$HOME/Applications/MacVim.app/Contents/MacOS/Vim"
     #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
     unset LSCOLORS
     unset GREP_COLOR
