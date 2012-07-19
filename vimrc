@@ -24,7 +24,7 @@ set encoding=utf-8
 " " saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
-"turn on the "ruler" (status info) at the bottom of the screen.
+"turn on the 'ruler' (status info) at the bottom of the screen.
 set ruler
 
 "magic for completion at the : command line.
@@ -158,7 +158,7 @@ if has("autocmd")
     " Clear old autocmds in group
     autocmd!
     " autoindent with two spaces, always expand tabs
-    autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+    autocmd FileType ruby,eruby,yaml,javascript set ai sw=2 sts=2 et
     autocmd FileType snippets set noexpandtab
     autocmd bufwritepost .vimrc source $MYVIMRC
     "set json to to javascript
