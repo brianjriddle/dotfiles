@@ -286,3 +286,40 @@ vnoremap <Tab>    >gv
 vnoremap <S-Tab>  <gv
 "remap control-] so we can get jump to files using ctags.
 noremap <leader>i <C-]>
+
+"make opening and closing taglist easier
+noremap <leader>I :Tlist<CR>
+
+"reformat json
+noremap <leader>j :FormatJson<CR>
+"reformat xml
+noremap <leader>x :FormatXml<CR>
+"""""
+" functions
+""""
+
+" ReformatJson requires jsonpp which
+" which is provided by https://github.com/jmhodges/jsonpp
+" use brew or follow the instructions to compile it your self
+" brew install jsonpp
+
+
+function! ReformatJson()
+    if executable('jsonpp')
+        silent %!jsonpp
+    else
+        echoerr "jsonpp not found in path"
+    endif
+endfunction
+command! FormatJson call ReformatJson()
+
+" ReformatXml requires xmllint provided by libxml
+
+function! ReformatXml()
+    if executable('xmllint')
+        silent %!xmllint --format -
+    else 
+        echoerr "xmllint not found in path"
+    end
+endfunction
+command! FormatXml call ReformatXml()
