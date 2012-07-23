@@ -101,7 +101,9 @@ set visualbell
 set t_vb=
 
 "Link unnamed register and OS clipboard:
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 
 " Enable use of the mouse for all modes
 if has('mouse')
