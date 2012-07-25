@@ -63,7 +63,7 @@ else
     export EDITOR=vim
 fi
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/work/apps/ant/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/.rvm/bin:$JAVA_HOME/bin:$PATH
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/work/apps/ant/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/.rvm/bin:$JAVA_HOME/bin
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
