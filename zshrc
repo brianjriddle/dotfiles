@@ -67,10 +67,12 @@ export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/work/apps/ant/b
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
+VIMRUNTIME=`vim -e -T dumb --cmd 'exe "set t_cm=\<C-M>"|echo $VIMRUNTIME|quit' | tr -d '\015' `
+
 #set up aliases
 alias less='less -XR'
+alias less=$VIMRUNTIME/macros/less.sh
 alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
-
-
+alias tmux="TERM=xterm-256color tmux -2"
