@@ -150,6 +150,7 @@ else
     set background=dark
 endif
 
+set t_Co=256
 colorscheme solarized
 
 if has("autocmd")
