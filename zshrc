@@ -75,4 +75,4 @@ alias less=$VIMRUNTIME/macros/less.sh
 alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
-alias tmux="tmux -2"
+alias tmux="TERM=screen-256color tmux"
