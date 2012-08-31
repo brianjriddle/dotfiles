@@ -300,6 +300,14 @@ noremap <leader>I :Tlist<CR>
 noremap <leader>j :FormatJson<CR>
 "reformat xml
 noremap <leader>x :FormatXml<CR>
+" Run the current file with rspec
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+
+" Prompt for a command to run
+map <Leader>rp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>rl :VimuxRunLastCommand<CR>
 """""
 " functions
 """"
