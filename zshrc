@@ -59,6 +59,12 @@ if [[ "Darwin" == `uname -s` ]]; then
         eval "`gdircolors -b ~/.DIR_COLORS`"
         alias ls="gls --color=auto"
     fi
+elif [[ "Linux" == `uname -s` ]]; then
+    export EDITOR=vim
+    if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
+        eval "`dircolors -b ~/.DIR_COLORS`"
+        alias ls='ls --color=auto'
+    fi
 else
     export EDITOR=vim
 fi
