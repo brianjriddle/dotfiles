@@ -61,9 +61,13 @@ if [[ "Darwin" == `uname -s` ]]; then
     fi
 elif [[ "Linux" == `uname -s` ]]; then
     export EDITOR=vim
-    if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
+    if [[ "$TERM" != "dumb" ]] && [[ -x /usr/bin/dircolors ]]; then
         eval "`dircolors -b ~/.DIR_COLORS`"
         alias ls='ls --color=auto'
+    fi
+    if [[ ! -z "$DISPLAY" ]]; then
+        echo "running xinitrc"
+        zsh $HOME/.xinitrc
     fi
 else
     export EDITOR=vim
