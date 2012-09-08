@@ -66,7 +66,6 @@ elif [[ "Linux" == `uname -s` ]]; then
         alias ls='ls --color=auto'
     fi
     if [[ ! -z "$DISPLAY" ]]; then
-        echo "running xinitrc"
         zsh $HOME/.xinitrc
     fi
 else
