@@ -166,6 +166,8 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
     "set json to to javascript
     autocmd BufRead *.json set filetype=javascript
+    "set to go
+    autocmd BufRead *.go set filetype=go
     "Rakefile, Capfile are ruby files.
     autocmd BufRead Capfile set filetype=ruby
     autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
