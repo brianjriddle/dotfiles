@@ -72,7 +72,7 @@ else
     export EDITOR=vim
 fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH #:$HOME/bin:$HOME/work/apps/ant/bin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
@@ -84,4 +84,5 @@ alias less=$VIMRUNTIME/macros/less.sh
 alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
+alias gsb="git status -s -b"
 alias tmux="TERM=screen-256color tmux"
