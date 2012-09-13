@@ -55,6 +55,9 @@ if [[ "Darwin" == `uname -s` ]]; then
     unset GREP_COLOR
     export JAVA_HOME=$(/usr/libexec/java_home)
     #check homebrew coreutils are installed
+    if [[ -f /usr/local/bin/gls ]]; then
+        alias ls="gls --color=auto"
+    fi
 elif [[ "Linux" == `uname -s` ]]; then
     export EDITOR=vim
     if [[ "$TERM" != "dumb" ]] && [[ -x /usr/bin/dircolors ]]; then
