@@ -56,6 +56,7 @@ if [[ "Darwin" == `uname -s` ]]; then
     export JAVA_HOME=$(/usr/libexec/java_home)
     #check homebrew coreutils are installed
     if [[ -f /usr/local/bin/gls ]]; then
+        eval "`gdircolors -b ~/.DIR_COLORS`"
         alias ls="gls --color=auto"
     fi
 elif [[ "Linux" == `uname -s` ]]; then
@@ -84,4 +85,3 @@ alias more=less
 alias vi=$EDITOR
 alias vim=$EDITOR
 alias gsb="git status -s -b"
-alias tmux="TERM=screen-256color tmux"
