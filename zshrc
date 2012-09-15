@@ -30,7 +30,7 @@ export RPROMPT='[%*]'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ant brew bundler git rails3 heroku)
+plugins=(ant brew bundler git gpg-agent heroku rails3 ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,7 +77,7 @@ export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
 VIMRUNTIME=`vim -e -T dumb --cmd 'exe "set t_cm=\<C-M>"|echo $VIMRUNTIME|quit' | tr -d '\015' `
-
+export GPG_TTY=$(tty)
 #set up aliases
 alias less='less -XR'
 alias less=$VIMRUNTIME/macros/less.sh
