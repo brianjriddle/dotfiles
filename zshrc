@@ -79,9 +79,10 @@ export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 VIMRUNTIME=`vim -e -T dumb --cmd 'exe "set t_cm=\<C-M>"|echo $VIMRUNTIME|quit' | tr -d '\015' `
 export GPG_TTY=$(tty)
 #set up aliases
-alias less='less -XR'
+alias gsb="git status -s -b"
 alias less=$VIMRUNTIME/macros/less.sh
+alias less='less -XR'
 alias more=less
+alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
-alias gsb="git status -s -b"
