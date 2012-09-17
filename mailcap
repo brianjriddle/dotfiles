@@ -1,0 +1,2 @@
+text/html; lynx '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+text/html; lynx -dump '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html

@@ -1,6 +1,6 @@
 include FileUtils::Verbose 
 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js profile rspec rvmrc tidyrc tmux.conf xinitrc Xresources zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js mailcap profile rspec rvmrc tidyrc tmux.conf xinitrc Xresources zshenv zshrc}
 
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
