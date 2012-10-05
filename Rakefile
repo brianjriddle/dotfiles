@@ -1,6 +1,6 @@
 include FileUtils::Verbose 
 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js mailcap profile rspec rvmrc tidyrc tmux.conf xinitrc Xresources zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc curlrc gemrc gitconfig gitignore irbrc js mailcap profile rspec rvmrc tidyrc xinitrc Xresources zshenv zshrc}
 
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
@@ -8,6 +8,20 @@ task :install_vimrc do
   cp 'gvimrc', File.expand_path('~/.gvimrc')
 end
 
+task 'tcase' do
+end
+
+desc 'install tmux-conf'
+task :install_tmux do
+  cp 'tmux.conf', File.expand_path('~/.tmux.conf')
+  os = `uname`
+  case 
+  when os =~ /Darwin/
+    cp 'tmux.osx.conf', File.expand_path('~/.tmux.local.conf')
+  when os =~ /Linux/
+    cp 'tmux.linux.conf', File.expand_path('~/.tmux.local.conf')
+  end
+end
 desc 'update vim bundles'
 task :update_vim_bundles do
   puts "updating vim submodules"
