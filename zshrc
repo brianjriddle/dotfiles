@@ -81,7 +81,6 @@ export GPG_TTY=$(tty)
 #set up aliases
 alias gsb="git status -s -b"
 alias less=$VIMRUNTIME/macros/less.sh
-alias less='less -XR'
 alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
