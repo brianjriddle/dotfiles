@@ -49,7 +49,11 @@ fi
 #mac specific settings
 
 if [[ "Darwin" == `uname -s` ]]; then
-    export EDITOR="$HOME/Applications/MacVim.app/Contents/MacOS/Vim"
+    if [[ "12.2.0" != `uname -r` ]]; then
+        export EDITOR="$HOME/Applications/MacVim.app/Contents/MacOS/Vim"
+    else
+        EDITOR=vim
+    fi
     #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
     unset LSCOLORS
     unset GREP_COLOR
