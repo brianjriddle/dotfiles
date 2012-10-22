@@ -211,7 +211,7 @@ set listchars=tab:>-,trail:·,eol:$
 """"""
 
 "enable ack.vim
-let g:ackprg="ack -H --nocolor --nogroup --column"
+let g:ackprg="ag --nocolor --nogroup --column"
 
 "don't let command-t take over the entire window
 let g:CommandTMaxHeight=10
