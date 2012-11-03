@@ -64,6 +64,7 @@ if [[ "Darwin" == `uname -s` ]]; then
         alias ls="gls --color=auto"
     fi
 elif [[ "Linux" == `uname -s` ]]; then
+    export TERM=screen-256color
     export EDITOR=vim
     if [[ "$TERM" != "dumb" ]] && [[ -x /usr/bin/dircolors ]]; then
         eval "`dircolors -b ~/.DIR_COLORS`"
