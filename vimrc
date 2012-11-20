@@ -17,11 +17,22 @@ set nocompatible
 "imap <left> <nop>
 "imap <right> <nop>
 
+" use folding
+set foldmethod=syntax
+
+"don't mistakenly ask for help
+inoremap <f1> <esc>
+nnoremap <f1> <esc>
+cnoremap <f1> <esc>
+
+set ttyfast
+
 set encoding=utf-8
+
 " One of the most important options to activate. Allows you to switch from an
-" " unsaved buffer without saving it first. Also allows you to keep an undo
-" " history for multiple files. Vim will complain if you try to quit without
-" " saving, and swap files will keep you safe if your computer crashes.
+" unsaved buffer without saving it first. Also allows you to keep an undo
+" history for multiple files. Vim will complain if you try to quit without
+" saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
 "turn on the 'ruler' (status info) at the bottom of the screen.
