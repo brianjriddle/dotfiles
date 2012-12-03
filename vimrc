@@ -234,6 +234,10 @@ let g:GPGPreferSymmetric="1"
 " key mappings
 """"
 
+" Use sane Regexes
+nnoremap / /\v
+vnoremap / /\v
+
 " Change <leader>
 let mapleader = ","
 
