@@ -63,6 +63,8 @@ if [[ "Darwin" == `uname -s` ]]; then
         eval "`gdircolors -b ~/.DIR_COLORS`"
         alias ls="gls --color=auto"
     fi
+    #add grc integration
+    source /usr/local/etc/grc.bashrc
 elif [[ "Linux" == `uname -s` ]]; then
     export TERM=screen-256color
     export EDITOR=vim
@@ -73,6 +75,8 @@ elif [[ "Linux" == `uname -s` ]]; then
     if [[ ! -z "$DISPLAY" ]]; then
         zsh $HOME/.xinitrc
     fi
+    #add grc integration
+    source /etc/grc.conf
 else
     export EDITOR=vim
 fi
@@ -89,6 +93,4 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
-
-#add grc integration
-source /usr/local/etc/grc.bashrc
+export GOPATH=$HOME/src/GO_ROOT
