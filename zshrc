@@ -93,4 +93,6 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
-export GOPATH=$HOME/src/GO_ROOT
+
+#add grc integration
+source /usr/local/etc/grc.bashrc

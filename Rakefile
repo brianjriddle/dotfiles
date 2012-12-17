@@ -32,7 +32,7 @@ end
 
 desc 'update pathogen'
 task :update_pathogen do
-  %x{curl https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > vim/autoload/pathogen.vim }
+  %x{curl --silent https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > vim/autoload/pathogen.vim }
   puts "done updating pathogen"
 end
 
