@@ -5,3 +5,5 @@
     ui = auto
 [branch]
 	autosetuprebase = always
+[push]
+	default = simple
