@@ -1,9 +1,9 @@
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
     editor = vim
 [color]
     ui = auto
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [push]
-	default = simple
+    default = simple
