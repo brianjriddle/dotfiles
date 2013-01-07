@@ -81,7 +81,6 @@ else
     export EDITOR=vim
 fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
