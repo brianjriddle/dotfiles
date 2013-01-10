@@ -1,0 +1,2 @@
+$('.divCommentWide').remove();
+$('.articleComments').remove();
