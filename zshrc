@@ -35,6 +35,10 @@ plugins=(ant brew bundler git gpg-agent heroku rails3 ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+if [ -f $HOME/.zshrc-local ]; then
+    source $HOME/.zshrc-local
+fi
+
 
 #set up zsh variables
 setopt RM_STAR_SILENT
@@ -81,6 +85,7 @@ else
     export EDITOR=vim
 fi
 
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
 export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
 export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
@@ -92,6 +97,3 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
-
-#add grc integration
-source /usr/local/etc/grc.bashrc
