@@ -1,0 +1,7 @@
+[ui]
+username=Brian Riddle <brianjriddle@gmail.com>
+[color]
+# valid modes are win32, ansi, auto, off
+mode = auto
+[extensions]
+color =
