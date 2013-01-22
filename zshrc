@@ -97,3 +97,6 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
+
+#add grc integration
+source /usr/local/etc/grc.bashrc
