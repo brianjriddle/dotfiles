@@ -224,9 +224,6 @@ set listchars=tab:>-,trail:·,eol:$
 "enable ack.vim
 let g:ackprg="ag --nocolor --nogroup --column"
 
-"don't let command-t take over the entire window
-let g:CommandTMaxHeight=10
-
 "use gnup2
 let g:GPGExecutable="/usr/local/bin/gpg2"
 let g:GPGPreferSymmetric="1"

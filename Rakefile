@@ -40,9 +40,6 @@ desc 'install vim dir to ~/.vim'
 task :install_vim => [:install_vimrc, :update_pathogen] do
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
-  Dir.chdir(File.expand_path('~/.vim/bundle/command-t')) do
-    sh "$HOME/.rvm/bin/rvm-shell system -c 'rake clean && rake make'"
-  end
 end
 
 desc 'checks to see which files are different'
