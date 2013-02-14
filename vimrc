@@ -179,8 +179,8 @@ if has("autocmd")
     autocmd BufRead *.json set filetype=javascript
     "set to go
     autocmd BufRead *.go set filetype=go
-    "Rakefile, Capfile are ruby files.
-    autocmd BufRead Capfile set filetype=ruby
+    "Gemfile, Capfile are ruby files.
+    autocmd BufRead Gemfile,Capfile set filetype=ruby
     autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
     autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
   augroup END
