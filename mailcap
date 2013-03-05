@@ -1,9 +1,22 @@
 #use elinks to display html mail inline in mutt
 text/html; elinks -force-html '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
 text/html; elinks -force-html -dump '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
-#text/html; links '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
-#text/html; links -dump '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
-#text/html; lynx '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
-#text/html; lynx -dump '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
-#text/html; lynx '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
-#text/html; lynx -dump '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+
+# MS Word documents
+application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+# Images
+image/jpg; ~/.mutt/view_attachment.sh %s jpg
+image/jpeg; ~/.mutt/view_attachment.sh %s jpg
+image/pjpeg; ~/.mutt/view_attachment.sh %s jpg
+image/png; ~/.mutt/view_attachment.sh %s png
+image/gif; ~/.mutt/view_attachment.sh %s gif
+
+# PDFs
+application/pdf; ~/.mutt/view_attachment.sh %s pdf
+
+# HTML
+text/html; ~/.mutt/view_attachment.sh %s html
+
+# Unidentified files
+application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
