@@ -79,12 +79,10 @@ else
     export EDITOR=vim
 fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/bin
-export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
-export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
 
 export GPG_TTY=$(tty)
 #set up aliases
+alias ant='ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger" ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts" ant'
 alias gsb="git status -s -b"
 alias less="less -XR"
 alias more=less
@@ -94,3 +92,5 @@ alias vim=$EDITOR
 
 #add grc integration
 source /usr/local/etc/grc.bashrc
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

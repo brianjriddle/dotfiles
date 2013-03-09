@@ -73,8 +73,7 @@ export RUBYOPT=rubygems
 export EDITOR=/usr/bin/vim
 export PATH=$PATH:~/bin
 
-export ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger"
-export ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts"
+alias ant='ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger" ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts" ant'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
