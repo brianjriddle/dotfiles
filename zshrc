@@ -63,6 +63,9 @@ if [[ "Darwin" == `uname -s` ]]; then
     fi
     #add grc integration
     source /usr/local/etc/grc.bashrc
+    if [[ -d /usr/local/Cellar/android-sdk/r21.1 ]]; then 
+        export ANDROID_SDK=/usr/local/Cellar/android-sdk/r21.1/
+    fi
 elif [[ "Linux" == `uname -s` ]]; then
     export TERM=screen-256color
     export EDITOR=vim
