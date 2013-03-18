@@ -38,6 +38,8 @@ source $ZSH/oh-my-zsh.sh
 if [ -f $HOME/.zshrc-local ]; then
     source $HOME/.zshrc-local
 fi
+
+
 #set up zsh variables
 setopt RM_STAR_SILENT
 unsetopt correct_all
@@ -51,7 +53,6 @@ fi
 #mac specific settings
 
 if [[ "Darwin" == `uname -s` ]]; then
-    export EDITOR=vim
     #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
     unset LSCOLORS
     unset GREP_COLOR
@@ -68,7 +69,6 @@ if [[ "Darwin" == `uname -s` ]]; then
     fi
 elif [[ "Linux" == `uname -s` ]]; then
     export TERM=screen-256color
-    export EDITOR=vim
     if [[ "$TERM" != "dumb" ]] && [[ -x /usr/bin/dircolors ]]; then
         eval "`dircolors -b ~/.DIR_COLORS`"
         alias ls='ls --color=auto'
@@ -78,9 +78,8 @@ elif [[ "Linux" == `uname -s` ]]; then
     fi
     #add grc integration
     source /etc/grc.conf
-else
-    export EDITOR=vim
 fi
+export EDITOR=vim
 
 
 export GPG_TTY=$(tty)
