@@ -42,7 +42,7 @@ fi
 setopt RM_STAR_SILENT
 unsetopt correct_all
 unsetopt auto_name_dirs
-export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 if [ -f /usr/bin/xdg-open ]; then
     alias open=/usr/bin/xdg-open
