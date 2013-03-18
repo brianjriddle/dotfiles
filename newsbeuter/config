@@ -1,0 +1,24 @@
+# change some default settings
+
+feed-sort-order unreadarticlecount-asc
+browser "open %u"
+
+# Keep the cache in dropbox.
+
+cache-file "~/Dropbox/private/newsbeuter/cache.db"
+
+# solarized dark from newsbeuter's contrib
+
+color listnormal color244 color234
+color listfocus  color166 color235 
+color info       color136 color235 
+color background color244 color234
+color article    color244 color234
+
+# keybindings
+# make more vim like
+unbind-key J
+unbind-key K
+bind-key j next
+bind-key k prev
+
