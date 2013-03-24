@@ -1,7 +1,9 @@
 # change some default settings
 
-feed-sort-order unreadarticlecount-asc
 browser "open %u"
+reload-threads 3
+refresh-on-startup yes
+feed-sort-order unreadarticlecount-asc
 
 # Keep the cache in dropbox.
 
@@ -22,3 +24,9 @@ unbind-key K
 bind-key j next
 bind-key k prev
 
+# plugins
+bookmark-cmd "~/.newsbeuter/bin/bookmark-pinboard.rb"
+# so i can set tags via pinboard
+bookmark-interactive yes
+# don't make me hit enter just to take defaults
+bookmark-autopilot yes

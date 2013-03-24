@@ -1,14 +1,11 @@
 include FileUtils::Verbose 
 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc gemrc gitconfig gitignore hgrc irbrc js mailcap profile rspec rvmrc tidyrc xinitrc Xresources zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc gemrc gitconfig gitignore hgrc irbrc js mailcap newsbeuter/config newsbeuter/urls newsbeuter/bin/bookmark-pinboard.rb profile rspec rvmrc tidyrc xinitrc Xresources zshenv zshrc}
 
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
   cp 'vimrc', File.expand_path('~/.vimrc')
   cp 'gvimrc', File.expand_path('~/.gvimrc')
-end
-
-task 'tcase' do
 end
 
 desc 'install tmux-conf'
@@ -51,6 +48,7 @@ end
 
 desc 'install base files'
 task :install_base_files do
+  mkdir_p "~/.newsbeuter/bin"
   FileList[rc_files].each do |file| 
     cp_r file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
   end
