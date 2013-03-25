@@ -4,6 +4,8 @@ browser "open %u"
 reload-threads 3
 refresh-on-startup yes
 feed-sort-order unreadarticlecount-asc
+show-read-feeds no
+show-read-articles no
 
 # Keep the cache in dropbox.
 
