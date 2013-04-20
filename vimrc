@@ -145,6 +145,12 @@ set number
 "see http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/
 set shell=sh
 
+"More natural splitting from
+"http://robots.thoughtbot.com/post/48275867281/vim-splits-move-faster-and-more-naturally
+"
+set splitbelow
+set splitright
+
 """"
 " plugins
 """"
@@ -245,6 +251,9 @@ map <C-k> <C-W>k
 map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+"toggle line numbers
+map <leader>3 :set number!<CR>
 
 "Run rake from rails.vim
 nmap <leader>r :Rake<cr>
