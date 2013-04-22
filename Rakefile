@@ -1,6 +1,6 @@
 include FileUtils::Verbose 
 
-rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc gemrc gitconfig gitignore hgrc irbrc js mailcap newsbeuter/config newsbeuter/urls newsbeuter/bin/bookmark-pinboard.rb profile rspec rvmrc tidyrc xinitrc Xresources zshenv zshrc}
+rc_files = %w{DIR_COLORS ackrc antopts bash_logout bash_profile bashrc gemrc gitconfig gitignore hgrc irbrc js mailcap newsbeuter/config newsbeuter/urls newsbeuter/bin/bookmark-pinboard.rb profile rspec rvmrc tidyrc tmux.conf xinitrc Xresources zshenv zshrc}
 
 desc 'install vimrc to ~/.vimrc' 
 task :install_vimrc do
@@ -42,7 +42,12 @@ end
 desc 'checks to see which files are different'
 task :check_rcs do
   FileList[rc_files].each do |file| 
-    print %x{ diff -q #{file} #{File.expand_path("~/.#{file}") } }
+    output =  %x{ diff -q #{file} #{File.expand_path("~/.#{file}") } }
+    if output =~ /^Files/
+      print "vimdiff " + output.gsub(/Files|and|differ/, "")
+    else
+      print output
+    end
   end
 end
 

@@ -95,4 +95,4 @@ alias vim=$EDITOR
 #add grc integration
 source /usr/local/etc/grc.bashrc
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
