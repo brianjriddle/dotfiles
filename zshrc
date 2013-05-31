@@ -79,7 +79,7 @@ elif [[ "Linux" == `uname -s` ]]; then
     #add grc integration
     source /etc/grc.conf
 fi
-export EDITOR=vim
+export EDITOR=emacs
 
 
 export GPG_TTY=$(tty)
