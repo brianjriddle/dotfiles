@@ -53,7 +53,7 @@ end
 
 desc 'install base files'
 task :install_base_files do
-  mkdir_p "~/.newsbeuter/bin"
+  mkdir_p File.expand_path "~/.newsbeuter/bin"
   FileList[rc_files].each do |file| 
     cp_r file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
   end
