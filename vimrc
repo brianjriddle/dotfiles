@@ -18,7 +18,7 @@ set nocompatible
 "imap <right> <nop>
 
 " use folding
-set foldmethod=syntax
+"set foldmethod=syntax
 
 "don't mistakenly ask for help
 inoremap <f1> <esc>
