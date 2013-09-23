@@ -64,8 +64,8 @@ if [[ "Darwin" == `uname -s` ]]; then
     fi
     #add grc integration
     source /usr/local/etc/grc.bashrc
-    if [[ -d /usr/local/Cellar/android-sdk/r21.1 ]]; then 
-        export ANDROID_SDK=/usr/local/Cellar/android-sdk/r21.1/
+    if [[ -d /usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION ]]; then 
+        export ANDROID_SDK=/usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION
     fi
 elif [[ "Linux" == `uname -s` ]]; then
     export TERM=screen-256color
@@ -79,7 +79,7 @@ elif [[ "Linux" == `uname -s` ]]; then
     #add grc integration
     source /etc/grc.conf
 fi
-export EDITOR=emacs
+export EDITOR=vim
 
 
 export GPG_TTY=$(tty)
@@ -95,4 +95,4 @@ alias vim=$EDITOR
 #add grc integration
 source /usr/local/etc/grc.bashrc
 
-export PATH=$HOME/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.rvm/bin:$HOME/bin:$PATH # Add RVM to PATH for scripting
