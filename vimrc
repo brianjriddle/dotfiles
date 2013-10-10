@@ -113,14 +113,14 @@ set t_vb=
 
 "Link unnamed register and OS clipboard:
 if $TMUX == ''
-  set clipboard+=unnamed
+    set clipboard+=unnamed
 endif
 
 " Enable use of the mouse for all modes
 if has('mouse')
     set mouse=a
 endif
- 
+
 "enable syntax highlight and other good stuff but not when using vimdiff
 if &diff
     syntax off
@@ -131,7 +131,7 @@ endif
 "map a key for pasting text in the terminal as this is
 "*my* default way of running vim :)
 set pastetoggle=<F12>
- 
+
 "The commandbar is 2 high
 set cmdheight=2
 
@@ -171,25 +171,25 @@ set t_Co=256
 colorscheme solarized
 
 if has("autocmd")
-  filetype plugin indent on
-  " Load matchit (% to bounce from do to end, etc.)
-  runtime! macros/matchit.vim
-  augroup myfiletypes
-    " Clear old autocmds in group
-    autocmd!
-    " autoindent with two spaces, always expand tabs
-    autocmd FileType ruby,eruby,yaml,javascript set ai sw=2 sts=2 et
-    autocmd FileType snippets set noexpandtab
-    autocmd bufwritepost .vimrc source $MYVIMRC
-    "set json to to javascript
-    autocmd BufRead *.json set filetype=javascript
-    "set to go
-    autocmd BufRead *.go set filetype=go
-    "Gemfile, Capfile are ruby files.
-    autocmd BufRead Gemfile,Capfile set filetype=ruby
-    autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
-    autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
-  augroup END
+    filetype plugin indent on
+    " Load matchit (% to bounce from do to end, etc.)
+    runtime! macros/matchit.vim
+    augroup myfiletypes
+        " Clear old autocmds in group
+        autocmd!
+        " autoindent with two spaces, always expand tabs
+        autocmd FileType ruby,eruby,yaml,javascript set ai sw=2 sts=2 et
+        autocmd FileType snippets set noexpandtab
+        autocmd bufwritepost .vimrc source $MYVIMRC
+        "set json to to javascript
+        autocmd BufRead *.json set filetype=javascript
+        "set to go
+        autocmd BufRead *.go set filetype=go
+        "Gemfile, Capfile are ruby files.
+        autocmd BufRead Gemfile,Capfile set filetype=ruby
+        autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
+        autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
+    augroup END
 endif
 
 "blantanly plagarized from https://github.com/scrooloose/vimfiles/blob/master/vimrc
@@ -300,13 +300,13 @@ call togglebg#map("<F5>")
 
 "keymappings for Tabular
 if !has('&g:tabular_loaded')
-  noremap  <leader>a= :Tabularize /=<CR>
-  vnoremap <leader>a= :Tabularize /=<CR>
-  noremap  <leader>a: :Tabularize /:\zs<CR>
-  noremap  <leader>A: :let save_cursor = getpos(".")<CR> :%Tabularize /:\zs<CR> :call setpos(".", save_cursor)<CR> :echo "Buffer realigned" <CR>
-  vnoremap <leader>a: :Tabularize /:\zs<CR>
-  noremap  <leader>a> :Tabularize /=><CR>
-  vnoremap <leader>a> :Tabularize /=><CR>
+    noremap  <leader>a= :Tabularize /=<CR>
+    vnoremap <leader>a= :Tabularize /=<CR>
+    noremap  <leader>a: :Tabularize /:\zs<CR>
+    noremap  <leader>A: :let save_cursor = getpos(".")<CR> :%Tabularize /:\zs<CR> :call setpos(".", save_cursor)<CR> :echo "Buffer realigned" <CR>
+    vnoremap <leader>a: :Tabularize /:\zs<CR>
+    noremap  <leader>a> :Tabularize /=><CR>
+    vnoremap <leader>a> :Tabularize /=><CR>
 endif
 
 " Backspace in Visual mode deletes selection.
@@ -338,10 +338,13 @@ map <Leader>rp :VimuxPromptCommand<CR>
 " Run last command executed by VimuxRunCommand
 map <Leader>rl :VimuxRunLastCommand<CR>
 
-if has("macunix")
-    nnoremap <leader>p :silent !open -a Google\ Chrome %<cr>:redraw!<cr>
-elseif has("unix")
-    nnoremap <leader>p :silent !open Google\ Chrome %<cr>:redraw!<cr>
+if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        nnoremap <leader>p :silent !open -a Google\ Chrome %<cr>:redraw!<cr>
+    else
+        nnoremap <leader>p :silent !open Google\ Chrome %<cr>:redraw!<cr>
+    endif
 endif
 
 """""
