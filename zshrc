@@ -91,6 +91,7 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
+alias gll="git log --pretty=medium --oneline --decorate" 
 
 #add grc integration
 source /usr/local/etc/grc.bashrc

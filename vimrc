@@ -337,6 +337,13 @@ map <Leader>rp :VimuxPromptCommand<CR>
 
 " Run last command executed by VimuxRunCommand
 map <Leader>rl :VimuxRunLastCommand<CR>
+
+if has("macunix")
+    nnoremap <leader>p :silent !open -a Google\ Chrome %<cr>:redraw!<cr>
+elseif has("unix")
+    nnoremap <leader>p :silent !open Google\ Chrome %<cr>:redraw!<cr>
+endif
+
 """""
 " functions
 """"
