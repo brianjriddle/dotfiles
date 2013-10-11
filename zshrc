@@ -95,5 +95,5 @@ alias gll="git log --pretty=medium --oneline --decorate"
 
 #add grc integration
 source /usr/local/etc/grc.bashrc
-
-export PATH=$HOME/.rvm/bin:$HOME/bin:$PATH # Add RVM to PATH for scripting
+GOPATH=$HOME/src/go/external:$HOME/src/go/local
+export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH # Add RVM to PATH for scripting
