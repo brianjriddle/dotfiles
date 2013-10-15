@@ -341,9 +341,9 @@ map <Leader>rl :VimuxRunLastCommand<CR>
 if has("unix")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        nnoremap <leader>p :silent !open -a Google\ Chrome %<cr>:redraw!<cr>
+        nnoremap <leader>p :silent !open %<cr>:redraw!<cr>
     else
-        nnoremap <leader>p :silent !open Google\ Chrome %<cr>:redraw!<cr>
+        nnoremap <leader>p :silent !xdg-open %<cr>:redraw!<cr>
     endif
 endif
 
