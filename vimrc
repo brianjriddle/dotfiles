@@ -138,9 +138,6 @@ set cmdheight=2
 "do not clear screen on exit
 "set t_ti= t_te=
 
-
-set number
-
 "fix for zshrc not getting source when using rvm.
 "see http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/
 set shell=sh
