@@ -62,8 +62,6 @@ if [[ "Darwin" == `uname -s` ]]; then
         eval "`gdircolors -b ~/.DIR_COLORS`"
         alias ls="gls --color=auto"
     fi
-    #add grc integration
-    source /usr/local/etc/grc.bashrc
     if [[ -d /usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION ]]; then 
         export ANDROID_SDK=/usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION
     fi
@@ -76,9 +74,26 @@ elif [[ "Linux" == `uname -s` ]]; then
     if [[ ! -z "$DISPLAY" ]]; then
         zsh $HOME/.xinitrc
     fi
-    #add grc integration
-    source /etc/grc.conf
 fi
+
+#add grc integration
+GRC=`which grc`
+if [ "$TERM" != dumb ] && [ -n "$GRC" ]
+then
+    alias colourify="$GRC -es --colour=auto"
+    alias configure='colourify ./configure'
+    alias diff='colourify diff'
+    alias make='colourify make'
+    alias gcc='colourify gcc'
+    alias g++='colourify g++'
+    alias as='colourify as'
+    alias gas='colourify gas'
+    alias ld='colourify ld'
+    alias netstat='colourify netstat'
+    alias ping='colourify ping'
+    alias traceroute='colourify /usr/sbin/traceroute'
+fi
+
 export EDITOR=vim
 
 
@@ -93,7 +108,5 @@ alias vi=$EDITOR
 alias vim=$EDITOR
 alias gll="git log --pretty=medium --oneline --decorate" 
 
-#add grc integration
-source /usr/local/etc/grc.bashrc
 export GOPATH=$HOME/src/go
 export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH # Add RVM to PATH for scripting
