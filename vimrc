@@ -344,6 +344,10 @@ if has("unix")
     endif
 endif
 
+" Refort yaml. blah
+
+map <leader>y :FormatYAML<CR>
+
 """""
 " functions
 """"
@@ -373,3 +377,14 @@ function! ReformatXml()
     end
 endfunction
 command! FormatXml call ReformatXml()
+
+" ReformatYAML requires ~/bin/yaml-pp
+
+function! ReformatYAML()
+    if executable('yaml-pp')
+        silent %!yaml-pp %
+    else 
+        echoerr "yaml-pp not found in path"
+    end
+endfunction
+command! FormatYAML call ReformatYAML()

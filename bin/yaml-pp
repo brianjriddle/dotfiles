@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+yaml_file = YAML::load(File.open(ARGV[0]))
+puts YAML::dump(yaml_file)
