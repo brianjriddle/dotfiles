@@ -1,0 +1,87 @@
+---
+- hosts: local
+  tasks:
+    - name: install ack
+      homebrew: name=ack state=present
+    - name: install apg
+      homebrew: name=apg state=present
+    - name: install asciidoc
+      homebrew: name=asciidoc state=present
+    - name: install clojure
+      homebrew: name=clojure state=present
+    - name: install coreutils
+      homebrew: name=coreutils state=present
+    - name: install curl
+      homebrew: name=curl state=present
+    - name: install curl
+      homebrew: name=curl-ca-bundle state=present
+    - name: install dirmngr
+      homebrew: name=dirmngr state=present
+    - name: install docbook
+      homebrew: name=docbook state=present
+    - name: install docbook
+      homebrew: name=docbook-xsl state=present
+    - name: install elinks
+      homebrew: name=elinks state=present
+    - name: install fortune
+      homebrew: name=fortune state=present
+    - name: install freetype
+      homebrew: name=freetype state=present
+    - name: install gettext
+      homebrew: name=gettext state=present
+    - name: install git
+      homebrew: name=git state=present
+    - name: install gnupg2
+      homebrew: name=gnupg2 state=present
+    - name: install go
+      homebrew: name=go state=present
+    - name: install gpg
+      homebrew: name=gpg-agent state=present
+    - name: install grc
+      homebrew: name=grc state=present
+    - name: install jq
+      homebrew: name=jq state=present
+    - name: install json
+      homebrew: name=json-c state=present
+    - name: install jsonpp
+      homebrew: name=jsonpp state=present
+    - name: install links
+      homebrew: name=links state=present
+    - name: install lynx
+      homebrew: name=lynx state=present
+    - name: install mutt
+      homebrew: name=mutt state=present
+    - name: install ncftp
+      homebrew: name=ncftp state=present
+    - name: install newsbeuter
+      homebrew: name=newsbeuter state=present
+    - name: install notmuch
+      homebrew: name=notmuch state=present
+    - name: install offline
+      homebrew: name=offline-imap state=present
+    - name: install pinentry
+      homebrew: name=pinentry state=present
+    - name: install pwgen
+      homebrew: name=pwgen state=present
+    - name: install readline
+      homebrew: name=readline state=present
+    - name: install reattach
+      homebrew: name=reattach-to-user-namespace state=present
+    - name: install s3cmd
+      homebrew: name=s3cmd state=present
+    - name: install sqlite
+      homebrew: name=sqlite state=present
+    - name: install the_silver_searcher
+      homebrew: name=the_silver_searcher state=present
+    - name: install tig
+      homebrew: name=tig state=present
+    - name: install tmux
+      homebrew: name=tmux state=present
+    - name: install tree
+      homebrew: name=tree state=present
+    - name: install urlview
+      homebrew: name=urlview state=present
+    - name: install wget
+      homebrew: name=wget state=present
+    - name: install xz
+      homebrew: name=xz state=present
