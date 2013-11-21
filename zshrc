@@ -109,4 +109,4 @@ alias vim=$EDITOR
 alias gll="git log --pretty=medium --oneline --decorate" 
 
 export GOPATH=$HOME/src/go
-export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH # Add RVM to PATH for scripting
+export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
