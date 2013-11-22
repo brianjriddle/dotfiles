@@ -1,87 +1,223 @@
 ---
 - hosts: local
   tasks:
+    - name: install aalib
+      homebrew: name=aalib state=present
     - name: install ack
       homebrew: name=ack state=present
+    - name: install android-sdk
+      homebrew: name=android-sdk state=present
+    - name: install ant
+      homebrew: name=ant state=present
     - name: install apg
       homebrew: name=apg state=present
+    - name: install apktool
+      homebrew: name=apktool state=present
+    - name: install apple-gcc42
+      homebrew: name=apple-gcc42 state=present
+    - name: install ascii
+      homebrew: name=ascii state=present
     - name: install asciidoc
       homebrew: name=asciidoc state=present
+    - name: install aspell
+      homebrew: name=aspell state=present
+    - name: install aview
+      homebrew: name=aview state=present
+    - name: install berkeley-db
+      homebrew: name=berkeley-db state=present
+    - name: install bison
+      homebrew: name=bison state=present
+    - name: install boost
+      homebrew: name=boost state=present
+    - name: install cairo
+      homebrew: name=cairo state=present
     - name: install clojure
       homebrew: name=clojure state=present
     - name: install coreutils
       homebrew: name=coreutils state=present
+    - name: install cowsay
+      homebrew: name=cowsay state=present
+    - name: install ctags
+      homebrew: name=ctags state=present
     - name: install curl
       homebrew: name=curl state=present
-    - name: install curl
+    - name: install curl-ca-bundle
       homebrew: name=curl-ca-bundle state=present
     - name: install dirmngr
       homebrew: name=dirmngr state=present
     - name: install docbook
       homebrew: name=docbook state=present
-    - name: install docbook
+    - name: install docbook-xsl
       homebrew: name=docbook-xsl state=present
     - name: install elinks
       homebrew: name=elinks state=present
+    - name: install emacs
+      homebrew: name=emacs state=present
+    - name: install fontconfig
+      homebrew: name=fontconfig state=present
     - name: install fortune
       homebrew: name=fortune state=present
     - name: install freetype
       homebrew: name=freetype state=present
+    - name: install gd
+      homebrew: name=gd state=present
+    - name: install gdk-pixbuf
+      homebrew: name=gdk-pixbuf state=present
     - name: install gettext
       homebrew: name=gettext state=present
     - name: install git
       homebrew: name=git state=present
+    - name: install git-extras
+      homebrew: name=git-extras state=present
+    - name: install glew
+      homebrew: name=glew state=present
+    - name: install glm
+      homebrew: name=glm state=present
+    - name: install gmime
+      homebrew: name=gmime state=present
+    - name: install gmp
+      homebrew: name=gmp state=present
+    - name: install gnu-getopt
+      homebrew: name=gnu-getopt state=present
     - name: install gnupg2
       homebrew: name=gnupg2 state=present
+    - name: install gnutls
+      homebrew: name=gnutls state=present
     - name: install go
       homebrew: name=go state=present
-    - name: install gpg
+    - name: install gobject-introspection
+      homebrew: name=gobject-introspection state=present
+    - name: install gource
+      homebrew: name=gource state=present
+    - name: install gpg-agent
       homebrew: name=gpg-agent state=present
+    - name: install gradle
+      homebrew: name=gradle state=present
     - name: install grc
       homebrew: name=grc state=present
+    - name: install grep
+      homebrew: name=grep state=present
+    - name: install gtk+
+      homebrew: name=gtk+ state=present
+    - name: install harfbuzz
+      homebrew: name=harfbuzz state=present
+    - name: install heroku-toolbelt
+      homebrew: name=heroku-toolbelt state=present
+    - name: install icu4c
+      homebrew: name=icu4c state=present
+    - name: install iftop
+      homebrew: name=iftop state=present
+    - name: install imagemagick
+      homebrew: name=imagemagick state=present
+    - name: install jmeter
+      homebrew: name=jmeter state=present
+    - name: install jp2a
+      homebrew: name=jp2a state=present
+    - name: install jpeg
+      homebrew: name=jpeg state=present
     - name: install jq
       homebrew: name=jq state=present
-    - name: install json
+    - name: install json-c
       homebrew: name=json-c state=present
     - name: install jsonpp
       homebrew: name=jsonpp state=present
-    - name: install links
-      homebrew: name=links state=present
+    - name: install leiningen
+      homebrew: name=leiningen state=present
+    - name: install lftp
+      homebrew: name=lftp state=present
     - name: install lynx
       homebrew: name=lynx state=present
+    - name: install memcached
+      homebrew: name=memcached state=present
+    - name: install mercurial
+      homebrew: name=mercurial state=present
+    - name: install mergelog
+      homebrew: name=mergelog state=present
+    - name: install mongodb
+      homebrew: name=mongodb state=present
     - name: install mutt
       homebrew: name=mutt state=present
     - name: install ncftp
       homebrew: name=ncftp state=present
+    - name: install nettle
+      homebrew: name=nettle state=present
     - name: install newsbeuter
       homebrew: name=newsbeuter state=present
+    - name: install node
+      homebrew: name=node state=present
     - name: install notmuch
       homebrew: name=notmuch state=present
-    - name: install offline
+    - name: install offline-imap
       homebrew: name=offline-imap state=present
+    - name: install openjpeg
+      homebrew: name=openjpeg state=present
+    - name: install openssl
+      homebrew: name=openssl state=present
+    - name: install ossp-uuid
+      homebrew: name=ossp-uuid state=present
+    - name: install p11-kit
+      homebrew: name=p11-kit state=present
+    - name: install pango
+      homebrew: name=pango state=present
+    - name: install par
+      homebrew: name=par state=present
+    - name: install parallel
+      homebrew: name=parallel state=present
+    - name: install pass
+      homebrew: name=pass state=present
+    - name: install pcre
+      homebrew: name=pcre state=present
+    - name: install pdf2svg
+      homebrew: name=pdf2svg state=present
+    - name: install phantomjs
+      homebrew: name=phantomjs state=present
     - name: install pinentry
       homebrew: name=pinentry state=present
+    - name: install pixman
+      homebrew: name=pixman state=present
+    - name: install poppler
+      homebrew: name=poppler state=present
+    - name: install postgresql
+      homebrew: name=postgresql state=present
+    - name: install pth
+      homebrew: name=pth state=present
     - name: install pwgen
       homebrew: name=pwgen state=present
+    - name: install qt
+      homebrew: name=qt state=present
     - name: install readline
       homebrew: name=readline state=present
-    - name: install reattach
+    - name: install reattach-to-user-namespace
       homebrew: name=reattach-to-user-namespace state=present
+    - name: install redis
+      homebrew: name=redis state=present
     - name: install s3cmd
       homebrew: name=s3cmd state=present
-    - name: install sqlite
-      homebrew: name=sqlite state=present
+    - name: install scons
+      homebrew: name=scons state=present
     - name: install the_silver_searcher
       homebrew: name=the_silver_searcher state=present
     - name: install tig
       homebrew: name=tig state=present
     - name: install tmux
       homebrew: name=tmux state=present
-    - name: install tree
-      homebrew: name=tree state=present
+    - name: install unrar
+      homebrew: name=unrar state=present
     - name: install urlview
       homebrew: name=urlview state=present
+    - name: install vim
+      homebrew: name=vim state=present
+    - name: install watch
+      homebrew: name=watch state=present
+    - name: install webalizer
+      homebrew: name=webalizer state=present
+    - name: install webp
+      homebrew: name=webp state=present
     - name: install wget
       homebrew: name=wget state=present
+    - name: install xapian
+      homebrew: name=xapian state=present
+    - name: install xmlto
+      homebrew: name=xmlto state=present
     - name: install xz
       homebrew: name=xz state=present
