@@ -1,2 +1,9 @@
 .DS\_Store
 *.sw?
+
+# Intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
