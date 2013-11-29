@@ -110,3 +110,17 @@ alias gll="git log --pretty=medium --oneline --decorate"
 
 export GOPATH=$HOME/src/go
 export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
+
+# Add my precmd hook
+function brris_precmd_hook {
+    local bar=""
+    local separator="-"
+    for ((i = 0; i < ${COLUMNS}; i++)) ; do
+        bar="${bar}${separator}"
+    done
+    echo $fg_bold[yellow]${bar}
+}
+
+[[ -z $precmd_functions ]] && precmd_functions=()
+
+precmd_functions=($precmd_functions brris_precmd_hook)
