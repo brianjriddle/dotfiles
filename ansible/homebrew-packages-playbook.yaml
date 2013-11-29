@@ -127,6 +127,8 @@
       homebrew: name=lftp state=present
     - name: install lynx
       homebrew: name=lynx state=present
+    - name: install maven
+      homebrew: name=maven state=present
     - name: install memcached
       homebrew: name=memcached state=present
     - name: install mercurial
