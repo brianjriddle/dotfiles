@@ -1,7 +1,7 @@
 [core]
     excludesfile = ~/.gitignore
     editor = vim
-	pager = less -F -X
+    pager = less -F -X
 [color]
     ui = auto
 [branch]
@@ -9,6 +9,6 @@
 [push]
     default = simple
 [url "https://"]
-	insteadOf = git://
+    insteadOf = git://
 [url "git@"]
-	insteadOf = git://
+    insteadOf = git://
