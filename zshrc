@@ -101,7 +101,7 @@ export GPG_TTY=$(tty)
 #set up aliases
 alias ant='ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger" ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts" ant'
 alias gsb="git status -s -b"
-alias less="less -XR"
+alias less="less -FRX"
 alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
