@@ -8,3 +8,7 @@
     autosetuprebase = always
 [push]
     default = simple
+[url "https://"]
+	insteadOf = git://
+[url "git@"]
+	insteadOf = git://
