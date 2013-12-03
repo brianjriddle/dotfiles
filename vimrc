@@ -156,7 +156,7 @@ set splitright
 filetype off 
 call pathogen#infect()
 call pathogen#helptags()
-
+syntax on
 "set up colorscheme
 if has('gui_running')
     set background=light
@@ -388,3 +388,11 @@ function! ReformatYAML()
     end
 endfunction
 command! FormatYAML call ReformatYAML()
+
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xLeft>=\e[1;*D"
+endif
