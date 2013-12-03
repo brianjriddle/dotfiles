@@ -30,7 +30,7 @@ export RPROMPT='[%*]'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ant brew git gpg-agent heroku rails3 ssh-agent)
+plugins=(ant brew git gpg-agent heroku rails ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
