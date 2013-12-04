@@ -388,9 +388,13 @@ function! ReformatYAML()
     end
 endfunction
 command! FormatYAML call ReformatYAML()
-
+" from http://sunaku.github.io/vim-256color-bce.html
 if &term =~ '^screen'
+    " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+    execute "set t_kP=\e[5;*~"
+    execute "set t_kN=\e[6;*~"
     " tmux will send xterm-style keys when its xterm-keys option is on
+    " Arrow keys http://unix.stackexchange.com/a/34723
     execute "set <xUp>=\e[1;*A"
     execute "set <xRight>=\e[1;*C"
     execute "set <xDown>=\e[1;*B"
