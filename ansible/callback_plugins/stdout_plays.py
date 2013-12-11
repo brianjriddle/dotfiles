@@ -39,8 +39,9 @@ def log(host, category, data):
             data = data.copy()
             invocation = data.pop('invocation', None)
             if invocation is not None:
-                for line in data[u'stdout'].split(u'\\n'):
-                    print("%s" % line)
+                if u'stdout' in data:
+                    for line in data[u'stdout'].split(u'\\n'):
+                        print("%s" % line)
 
 class CallbackModule(object):
     """
