@@ -34,7 +34,7 @@ task :update_pathogen do
 end
 
 desc 'install vim dir to ~/.vim'
-task :install_vim => [:install_vimrc, :update_pathogen] do
+task :install_vim => [:install_vimrc] do
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
 end
