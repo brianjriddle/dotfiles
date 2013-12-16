@@ -917,7 +917,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>249 377 592 584 0 0 1600 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1913 1174 0 0 1920 1178 </string>
+	<string>0 10 1898 768 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 512 1457 656 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3777,13 +3777,13 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.googlecode.com/svn/trunk/appcasts/testing.xml</string>
+	<string>http://iterm2.com/appcasts/testing.xml</string>
 	<key>SULastCheckTime</key>
-	<date>2013-12-04T10:53:12Z</date>
+	<date>2013-12-15T08:44:26Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
-	<false/>
+	<true/>
 	<key>Selected Text Color</key>
 	<dict>
 		<key>Blue Component</key>
@@ -3855,6 +3855,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130319</string>
+	<string>1.0.0.20131124</string>
 </dict>
 </plist>
