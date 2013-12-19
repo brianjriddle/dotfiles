@@ -106,7 +106,7 @@ alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
-alias gll="git log --pretty=medium --oneline --decorate" 
+alias gll='git log --decorate --graph --date=short --format="%C(auto)%h%C(reset) %C(green)%ar%C(reset) %C(blue)(%an)%C(reset) %C(auto)%d%C(reset) - %s(reset)"'
 
 export GOPATH=$HOME/src/go
 export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
