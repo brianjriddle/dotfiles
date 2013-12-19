@@ -22,8 +22,6 @@ end
 desc 'update vim bundles'
 task :update_vim_bundles do
   puts "updating vim submodules"
-  sh 'git submodule update --init'
-  sh 'git submodule foreach git checkout master'
   sh 'git submodule foreach git pull'
 end
 
