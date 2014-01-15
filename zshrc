@@ -115,6 +115,7 @@ export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/sha
 function brris_precmd_hook {
     local bar=""
     local separator="-"
+    local i=0;
     for ((i = 0; i < ${COLUMNS}; i++)) ; do
         bar="${bar}${separator}"
     done
