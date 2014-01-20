@@ -219,6 +219,8 @@
       homebrew: name=wget state=present
     - name: install xapian
       homebrew: name=xapian state=present
+    - name: install xctool
+      homebrew: name=xctool state=present
     - name: install xmlto
       homebrew: name=xmlto state=present
     - name: install xz
