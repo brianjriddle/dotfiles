@@ -36,6 +36,9 @@ desc 'install vim dir to ~/.vim'
 task :install_vim => [:install_vimrc] do
   rm_r File.expand_path('~/.vim'), :force => true
   cp_r 'vim', File.expand_path('~/.vim')
+  Dir.glob(File.expand_path('~/.vim/bundle/*/.git*')) do |file|
+    rm_r file
+  end
 end
 
 desc 'checks to see which files are different'
