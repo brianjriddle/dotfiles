@@ -39,7 +39,6 @@ if [ -f $HOME/.zshrc-local ]; then
     source $HOME/.zshrc-local
 fi
 
-
 #set up zsh variables
 setopt RM_STAR_SILENT
 unsetopt correct_all
@@ -95,7 +94,6 @@ then
 fi
 
 export EDITOR=vim
-
 
 export GPG_TTY=$(tty)
 #set up aliases
