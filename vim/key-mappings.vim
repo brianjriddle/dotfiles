@@ -52,8 +52,8 @@ nmap <leader>z ]s
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>N :NERDTreeFind<CR>
 
-"map f6 to toggle search highlighting
-map <F6> :silent :nohlsearch<CR>
+"map 'Return' to toggle search highlighting
+map <CR> :silent :nohlsearch<CR>
 
 " map f7 to allow turning on and off of syntax on/off
 map <F7> :if exists("syntax_on") <Bar> syntax off <Bar> else <Bar> syntax enable <Bar> endif<CR>
