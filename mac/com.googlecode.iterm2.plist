@@ -917,9 +917,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>249 377 592 584 0 0 1600 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1913 1174 0 0 1920 1178 </string>
+	<string>0 5 1898 768 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 512 1457 656 0 0 1920 1178 </string>
+	<string>0 120 1280 656 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>2 4 1278 774 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -939,6 +939,8 @@
 			<string></string>
 			<key>AWDS Window Option</key>
 			<string>No</string>
+			<key>Allow Title Reporting</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -1098,6 +1100,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Blend</key>
@@ -1615,6 +1619,10 @@
 			<key>Use Bold Font</key>
 			<false/>
 			<key>Use Bright Bold</key>
+			<false/>
+			<key>Use Canonical Parser</key>
+			<false/>
+			<key>Use Italic Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
@@ -3779,7 +3787,7 @@
 	<key>SUFeedURL</key>
 	<string>http://iterm2.com/appcasts/testing.xml</string>
 	<key>SULastCheckTime</key>
-	<date>2014-01-16T09:52:59Z</date>
+	<date>2014-04-23T14:43:57Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -3855,6 +3863,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20131228</string>
+	<string>1.0.0.20140421</string>
 </dict>
 </plist>
