@@ -1,11 +1,7 @@
-syntax on
 "set up colorscheme
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-
+set background=dark
 set t_Co=256
+if system('uname')=~'Linux'
+    let g:solarized_termcolors=256
+endif
 colorscheme solarized
-
