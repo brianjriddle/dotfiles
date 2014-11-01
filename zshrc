@@ -107,7 +107,10 @@ alias vim=$EDITOR
 alias gll='git log --decorate --graph --date=short --format="%C(auto)%h%C(reset) %C(green)%ar%C(reset) %C(blue)(%an)%C(reset) %C(auto)%d%C(reset) - %s"'
 
 export GOPATH=$HOME/src/go
-export PATH=$HOME/.rvm/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
+export PATH=$HOME/.rbenv/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
+
+#initialize rbenv
+eval "$(rbenv init -)"
 
 # Add my precmd hook
 function brris_precmd_hook {
