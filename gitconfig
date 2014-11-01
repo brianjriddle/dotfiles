@@ -12,3 +12,6 @@
     insteadOf = git://
 [url "git@"]
     insteadOf = git://
+[user]
+	email = brianjriddle@gmail.com
+	name = Brian Riddle
