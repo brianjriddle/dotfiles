@@ -43,6 +43,7 @@ fi
 setopt RM_STAR_SILENT
 unsetopt correct_all
 unsetopt auto_name_dirs
+unsetopt nomatch
 export LC_ALL=en_US.UTF-8
 
 if [ -f /usr/bin/xdg-open ]; then
@@ -61,7 +62,7 @@ if [[ "Darwin" == `uname -s` ]]; then
         eval "`gdircolors -b ~/.DIR_COLORS`"
         alias ls="gls --color=auto"
     fi
-    if [[ -d /usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION ]]; then 
+    if [[ -d /usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION ]]; then
         export ANDROID_SDK=/usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION
     fi
 elif [[ "Linux" == `uname -s` ]]; then
