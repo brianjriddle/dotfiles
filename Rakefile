@@ -17,6 +17,8 @@ task :install_tmux do
     cp 'tmux.osx.conf', File.expand_path('~/.tmux.local.conf')
   when os =~ /Linux/
     cp 'tmux.linux.conf', File.expand_path('~/.tmux.local.conf')
+  when os =~ /CYGWIN_NT/
+    cp 'tmux.cygwin.conf', File.expand_path('~/.tmux.local.conf')
   end
 end
 desc 'update vim bundles'
