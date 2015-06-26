@@ -95,12 +95,12 @@ then
 fi
 
 export EDITOR=vim
-
+export LESS="-FRX"
 export GPG_TTY=$(tty)
 #set up aliases
 alias ant='ANT_ARGS="-logger org.apache.tools.ant.listener.AnsiColorLogger" ANT_OPTS="-Dant.logger.defaults=$HOME/.antopts" ant'
 alias gsb="git status -s -b"
-alias less="less -FRX"
+alias less="less $LESS"
 alias more=less
 alias tmux="tmux -2"
 alias vi=$EDITOR
