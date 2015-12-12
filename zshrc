@@ -106,9 +106,8 @@ alias tmux="tmux -2"
 alias vi=$EDITOR
 alias vim=$EDITOR
 alias gll='git log --decorate --graph --date=short --format="%C(auto)%h%C(reset) %C(green)%ar%C(reset) %C(blue)(%an)%C(reset) %C(auto)%d%C(reset) - %s"'
-
-export GOPATH=$HOME/src/go
-export PATH=$HOME/.rbenv/bin:$HOME/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 #initialize rbenv
 eval "$(rbenv init -)"
