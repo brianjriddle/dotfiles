@@ -110,7 +110,7 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 #initialize rbenv
-eval "$(rbenv init -)"
+eval "$($HOME/.rbenv/bin/rbenv init -)"
 
 # Add my precmd hook
 function brris_precmd_hook {
