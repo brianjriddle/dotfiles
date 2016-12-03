@@ -66,7 +66,11 @@ if [[ "Darwin" == `uname -s` ]]; then
         export ANDROID_SDK=/usr/local/Cellar/android-sdk/$ANDROID_SDK_VERSION
     fi
 elif [[ "Linux" == `uname -s` ]]; then
-    export TERM=screen-256color
+	if [[ $TERM == "xterm" ]]; then
+		export TERM=xterm-256color
+	elif [[ $TERM == "tmux" ]]; then
+		export TERM=screen-256color
+	fi
     if [[ "$TERM" != "dumb" ]] && [[ -x /usr/bin/dircolors ]]; then
         eval "`dircolors -b ~/.DIR_COLORS`"
         alias ls='ls --color=auto'
