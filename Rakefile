@@ -58,8 +58,12 @@ end
 desc 'install base files'
 task :install_base_files do
   mkdir_p File.expand_path "~/.newsbeuter/bin"
-  FileList[rc_files].each do |file| 
-    cp_r file , File.expand_path("~/.#{file}") unless file.eql? "gitconfig"
+  filelist = rc_files - ["gitconfig"]
+  FileList[filelist].each do |file| 
+    target = File.expand_path("~/.#{file}")
+    rm_r target, :secure => true, :force => true
+    cp_r file , target # unless file.eql? "gitconfig"
+    chmod 0400, target
   end
 end
 
