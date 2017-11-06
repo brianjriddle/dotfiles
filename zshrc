@@ -39,6 +39,8 @@ if [ -f $HOME/.zshrc-local ]; then
     source $HOME/.zshrc-local
 fi
 
+export PATH=$PATH:$HOME/bin
+
 #set up zsh variables
 setopt RM_STAR_SILENT
 unsetopt correct_all
