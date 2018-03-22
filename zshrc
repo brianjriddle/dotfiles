@@ -113,8 +113,6 @@ alias vi=$EDITOR
 alias vim=$EDITOR
 alias gll='git log --decorate --graph --date=short --format="%C(auto)%h%C(reset) %C(green)%ar%C(reset) %C(blue)(%an)%C(reset) %C(auto)%d%C(reset) - %s"'
 alias gnm='git log --decorate --graph --no-merges --date=short --format="%C(auto)%h%C(reset) %C(green)%ar%C(reset) %C(blue)(%an)%C(reset) %C(auto)%d%C(reset) - %s"'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
 
 #initialize rbenv
 if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
