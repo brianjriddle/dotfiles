@@ -117,6 +117,8 @@ alias gnm='git log --decorate --graph --no-merges --date=short --format="%C(auto
 #initialize rbenv
 if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
 	eval "$($HOME/.rbenv/bin/rbenv init -)"
+elif [[ -f /usr/local/bin/rbenv ]]; then
+	eval "$(/usr/local/bin/rbenv init -)"
 fi
 
 # Add my precmd hook
@@ -133,3 +135,6 @@ function brris_precmd_hook {
 [[ -z $precmd_functions ]] && precmd_functions=()
 
 precmd_functions=($precmd_functions brris_precmd_hook)
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
