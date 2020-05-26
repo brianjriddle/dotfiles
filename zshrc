@@ -39,6 +39,10 @@ if [ -f $HOME/.zshrc-local ]; then
     source $HOME/.zshrc-local
 fi
 
+if command -v jenv 1>/dev/null 2>&1; then
+	eval "$(jenv init -)"
+fi
+
 export PATH=$PATH:$HOME/bin
 
 #set up zsh variables
@@ -139,6 +143,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-if command -v jenv 1>/dev/null 2>&1; then
-	eval "$(jenv init -)"
-fi
