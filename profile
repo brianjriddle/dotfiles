@@ -21,4 +21,3 @@ if [ -d "$HOME/bin" ] ; then
 fi
 # export GOROOT=/usr/local/go
 export GOPATH=$HOME/src/go
-export PATH=$HOME/.rbenv/bin:$HOME/bin:${GOROOT}/bin:${GOPATH//://bin:}/bin:$PATH:/usr/local/share/npm/bin
