@@ -122,6 +122,8 @@ if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
 	eval "$($HOME/.rbenv/bin/rbenv init -)"
 elif [[ -f /usr/local/bin/rbenv ]]; then
 	eval "$(/usr/local/bin/rbenv init -)"
+elif [[ -f /opt/homebrew/bin/rbenv ]]; then
+	eval "$(/opt/homebrew/bin/rbenv init -)"
 fi
 
 # Add my precmd hook
