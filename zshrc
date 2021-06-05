@@ -31,14 +31,14 @@ export RPROMPT='[%*]'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+plugins=(ant brew git gpg-agent heroku rails ssh-agent)
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 if [ -f $HOME/.zshrc-local ]; then
     source $HOME/.zshrc-local
 fi
-
-plugins=(ant brew git gpg-agent heroku rails ssh-agent)
 
 if command -v jenv 1>/dev/null 2>&1; then
 	eval "$(jenv init -)"
