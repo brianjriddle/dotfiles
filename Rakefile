@@ -63,7 +63,7 @@ task :install_base_files do
     target = File.expand_path("~/.#{file}")
     rm_r target, :secure => true, :force => true
     cp_r file , target # unless file.eql? "gitconfig"
-    chmod 0400, target
+    chmod 0400, target unless file.eql? "spacemacs"
   end
 end
 
