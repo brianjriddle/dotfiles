@@ -32,7 +32,7 @@ export RPROMPT='[%*]'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 plugins=(ant brew git gpg-agent heroku rails ssh-agent)
-
+zstyle :omz:plugins:ssh-agent ssh-add-args -K
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
