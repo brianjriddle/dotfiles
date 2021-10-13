@@ -16,5 +16,5 @@
 	email = brianjriddle@gmail.com
 	name = Brian Riddle
 [alias]
-	recent = branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\"
+	recent = branch --sort=-committerdate --format=\"%(objectname:short)%09%(committerdate:relative)%09%(refname:short)\"
 
