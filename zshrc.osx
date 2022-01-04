@@ -1,0 +1,1 @@
+zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
