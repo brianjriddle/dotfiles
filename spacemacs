@@ -47,7 +47,9 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      (org :variables
-          org-enable-org-journal-support t)
+          org-enable-org-journal-support t
+          org-startup-indented t
+          org-indent-mode t)
      (osx :variables osx-option-as 'meta
            osx-right-option-as 'none)
      (shell :variables
