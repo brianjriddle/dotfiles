@@ -550,6 +550,14 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; For dictionaries look here https://wiki.openoffice.org/wiki/Dictionaries
+  (with-eval-after-load "ispell"
+    (setq ispell-program-name "hunspell")
+    ;; ispell-set-spellchecker-params has to be called
+    ;; before ispell-hunspell-add-multi-dic will work
+    (ispell-set-spellchecker-params)
+    (ispell-hunspell-add-multi-dic "sv_SE,en_GB")
+    (setq ispell-dictionary "sv_SE,en_GB"))
 )
 
 
