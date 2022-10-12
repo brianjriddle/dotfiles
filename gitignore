@@ -7,3 +7,4 @@
 *.iws
 .idea/
 out/
+http-client.private.env.json
