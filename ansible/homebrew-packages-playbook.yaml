@@ -93,8 +93,6 @@
       homebrew: name=gpg-agent state=present
     - name: install gradle
       homebrew: name=gradle state=present
-    - name: install grc
-      homebrew: name=grc state=present
     - name: install grep
       homebrew: name=grep state=present
     - name: install gtk+
