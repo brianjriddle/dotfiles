@@ -57,7 +57,6 @@ if [[ "Darwin" == `uname -s` ]]; then
     #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
     unset LSCOLORS
     unset GREP_COLOR
-    export JAVA_HOME="$(/usr/libexec/java_home)"
     #check homebrew coreutils are installed
     if [[ -f /usr/local/bin/gls ]]; then
         eval "`gdircolors -b ~/.DIR_COLORS`"
