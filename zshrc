@@ -30,7 +30,7 @@ export RPROMPT='[%*]'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ant brew git gpg-agent heroku rails ssh-agent)
+plugins=(git sdk ssh-agent)
 
 # Customize to your needs...
 if [ -f $HOME/.zshrc-local ]; then
@@ -38,10 +38,6 @@ if [ -f $HOME/.zshrc-local ]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-
-if command -v jenv 1>/dev/null 2>&1; then
-	eval "$(jenv init -)"
-fi
 
 export PATH=$PATH:$HOME/bin
 
@@ -125,4 +121,8 @@ precmd_functions=($precmd_functions brris_precmd_hook)
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "/Users/bririd/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bririd/.sdkman/bin/sdkman-init.sh"
 
