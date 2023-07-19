@@ -1,5 +1,8 @@
 # brianjriddle's dotfiles
 
+In process of moving this to nix, and home-manager
+
+
 this is where i let my OCD reign free. there may not be any dragons lurking 
 around here but there *might* be a wyvern or two.
 
@@ -18,7 +21,7 @@ if you use zsh & want to start using oh-my-zsh
 
     rake install_oh_my_zsh
 
-##tmux
+## tmux
 
     rake install_tmux
 
